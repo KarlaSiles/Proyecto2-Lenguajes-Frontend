@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using MercatikaApp.Views;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +20,16 @@ namespace MercatikaApp
         public MainWindow()
         {
             InitializeComponent();
+        }
+        private void AbrirProducto_Click(object sender, RoutedEventArgs e)
+        {
+            var ventanaProductos = new ProductView();
+            ventanaProductos.ShowDialog();
+        }
+        private void BtnInsertDetail_Click(object sender, RoutedEventArgs e)
+        {
+            var detailWindow = new InsertProductDetailView();
+            detailWindow.Show();
         }
 
         private void LogOut_Click(object sender, RoutedEventArgs e)

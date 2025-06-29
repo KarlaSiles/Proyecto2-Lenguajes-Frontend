@@ -11,9 +11,6 @@
     <Compile Update="Views\OrdersUcView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\ProductsUcView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Views\ReportsUcView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

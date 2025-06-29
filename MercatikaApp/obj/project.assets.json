@@ -824,23 +824,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\scorp\\.nuget\\packages\\": {},
+    "C:\\Users\\gsile\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\MercatikaApp.csproj",
+      "projectUniqueName": "D:\\Lenguajes\\Proyectos\\Project 2\\Código\\Frontend\\Front Products 85%\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\MercatikaApp.csproj",
       "projectName": "MercatikaApp",
-      "projectPath": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\MercatikaApp.csproj",
-      "packagesPath": "C:\\Users\\scorp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\obj\\",
+      "projectPath": "D:\\Lenguajes\\Proyectos\\Project 2\\Código\\Frontend\\Front Products 85%\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\MercatikaApp.csproj",
+      "packagesPath": "C:\\Users\\gsile\\.nuget\\packages\\",
+      "outputPath": "D:\\Lenguajes\\Proyectos\\Project 2\\Código\\Frontend\\Front Products 85%\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\scorp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gsile\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -917,7 +917,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

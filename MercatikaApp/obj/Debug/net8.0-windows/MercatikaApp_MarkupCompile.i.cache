@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\scorp\WPF works\Proyecto2-Lenguajes-Frontend\MercatikaApp\obj\Debug\net8.0-windows\
+D:\Lenguajes\Proyectos\Project 2\Código\Frontend\Front Products 85%\Proyecto2-Lenguajes-Frontend\MercatikaApp\obj\Debug\net8.0-windows\
 MercatikaApp
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-C:\Users\scorp\WPF works\Proyecto2-Lenguajes-Frontend\MercatikaApp\App.xaml
-6-1924519036
+D:\Lenguajes\Proyectos\Project 2\Código\Frontend\Front Products 85%\Proyecto2-Lenguajes-Frontend\MercatikaApp\App.xaml
+82086647997
 11413424753
-28-1065055056
-2101989783920
-LoginWindow.xaml;MainWindow.xaml;Views\ClientsUcView.xaml;Views\OrdersUcView.xaml;Views\ProductsUcView.xaml;Views\ReportsUcView.xaml;
+341567459334
+2101151372050
+LoginWindow.xaml;MainWindow.xaml;Views\ClientsUcView.xaml;Views\InsertProductDetailView.xaml;Views\OrdersUcView.xaml;Views\ProductInsertView.xaml;Views\ProductView.xaml;Views\ReportsUcView.xaml;
 
-False
+True
 

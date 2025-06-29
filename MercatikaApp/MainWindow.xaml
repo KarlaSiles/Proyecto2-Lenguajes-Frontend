@@ -31,10 +31,14 @@
             <!-- Menú horizontal -->
             <Menu>
                 <MenuItem Header="Orders"/>
-                <MenuItem Header="Products"/>
+                <MenuItem Header="Products">
+                    <MenuItem Header="Abrir Gestión de Productos" Click="AbrirProducto_Click"/>
+                    <MenuItem Header="Abrir Gestión de Detalles" Click="BtnInsertDetail_Click"/>
+                </MenuItem>
                 <MenuItem Header="Clients"/>
                 <MenuItem Header="Reports"/>
             </Menu>
+
         </StackPanel>
 
         <!-- Resto del contenido -->

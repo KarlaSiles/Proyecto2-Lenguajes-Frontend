@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace MercatikaApp.Models
 {
-    class Category
-    {
+ 
+        public class Category
+        {
+            public int CategoryCode { get; set; }
+            public string Description { get; set; }
+        }
     }
-}
+

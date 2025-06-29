@@ -10,19 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace MercatikaApp.Views
 {
     /// <summary>
-    /// Lógica de interacción para ProductsUcView.xaml
+    /// ProductViewModel.xaml
     /// </summary>
-    public partial class ProductsUcView : UserControl
+    public partial class ProductView : Window
     {
-        public ProductsUcView()
+        public ProductView()
         {
             InitializeComponent();
         }
+        private void AbrirInsertarProducto_Click(object sender, RoutedEventArgs e)
+        {
+            var insertWindow = new ProductInsertView();
+            insertWindow.ShowDialog(); 
+        }
+
     }
 }
