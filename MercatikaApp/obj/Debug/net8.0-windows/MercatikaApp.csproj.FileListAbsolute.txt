@@ -45,3 +45,5 @@ C:\Users\scorp\WPF works\Proyecto2-Lenguajes-Frontend\MercatikaApp\obj\Debug\net
 C:\Users\scorp\WPF works\Proyecto2-Lenguajes-Frontend\MercatikaApp\obj\Debug\net8.0-windows\Views\OrdersUcView.baml
 C:\Users\scorp\WPF works\Proyecto2-Lenguajes-Frontend\MercatikaApp\obj\Debug\net8.0-windows\Views\ProductsUcView.baml
 C:\Users\scorp\WPF works\Proyecto2-Lenguajes-Frontend\MercatikaApp\obj\Debug\net8.0-windows\Views\ReportsUcView.baml
+C:\Users\scorp\WPF works\Proyecto2-Lenguajes-Frontend\MercatikaApp\bin\Debug\net8.0-windows\appsettings.json
+C:\Users\scorp\WPF works\Proyecto2-Lenguajes-Frontend\MercatikaApp\obj\Debug\net8.0-windows\MercatikaApp_Content.g.cs

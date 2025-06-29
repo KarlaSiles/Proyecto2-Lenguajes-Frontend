@@ -118,7 +118,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 17,
+          "SelectedChildIndex": 16,
           "Children": [
             {
               "$type": "Bookmark",
@@ -146,27 +146,15 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OrdersUcView.xaml",
-              "DocumentMoniker": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\Views\\OrdersUcView.xaml",
-              "RelativeDocumentMoniker": "MercatikaApp\\Views\\OrdersUcView.xaml",
-              "ToolTip": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\Views\\OrdersUcView.xaml",
-              "RelativeToolTip": "MercatikaApp\\Views\\OrdersUcView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-28T10:22:17.75Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Document",
@@ -177,8 +165,7 @@
               "ToolTip": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\Views\\ClientsUcView.xaml",
               "RelativeToolTip": "MercatikaApp\\Views\\ClientsUcView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-28T10:21:44.094Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:21:44.094Z"
             },
             {
               "$type": "Document",
@@ -189,8 +176,7 @@
               "ToolTip": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\Views\\ProductsUcView.xaml",
               "RelativeToolTip": "MercatikaApp\\Views\\ProductsUcView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-28T10:21:23.044Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:21:23.044Z"
             },
             {
               "$type": "Document",
@@ -202,8 +188,7 @@
               "RelativeToolTip": "MercatikaApp\\ViewModel\\ReportViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:18:01.72Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:18:01.72Z"
             },
             {
               "$type": "Document",
@@ -215,8 +200,7 @@
               "RelativeToolTip": "MercatikaApp\\ViewModel\\ProductViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:17:47.943Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:17:47.943Z"
             },
             {
               "$type": "Document",
@@ -228,8 +212,7 @@
               "RelativeToolTip": "MercatikaApp\\ViewModel\\OrderViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:17:35.298Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:17:35.298Z"
             },
             {
               "$type": "Document",
@@ -241,8 +224,7 @@
               "RelativeToolTip": "MercatikaApp\\ViewModel\\ClientViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:17:21.773Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:17:21.773Z"
             },
             {
               "$type": "Document",
@@ -254,8 +236,7 @@
               "RelativeToolTip": "MercatikaApp\\Services\\ClientApiService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:16:45.229Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:16:45.229Z"
             },
             {
               "$type": "Document",
@@ -271,6 +252,17 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrdersUcView.xaml",
+              "DocumentMoniker": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\Views\\OrdersUcView.xaml",
+              "RelativeDocumentMoniker": "MercatikaApp\\Views\\OrdersUcView.xaml",
+              "ToolTip": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\Views\\OrdersUcView.xaml",
+              "RelativeToolTip": "MercatikaApp\\Views\\OrdersUcView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-28T10:22:17.75Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 9,
               "Title": "ReportApiService.cs",
               "DocumentMoniker": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\Services\\ReportApiService.cs",
@@ -279,8 +271,7 @@
               "RelativeToolTip": "MercatikaApp\\Services\\ReportApiService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:16:20.458Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:16:20.458Z"
             },
             {
               "$type": "Document",
@@ -292,8 +283,7 @@
               "RelativeToolTip": "MercatikaApp\\Services\\ProductApiService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:16:07.521Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:16:07.521Z"
             },
             {
               "$type": "Document",
@@ -305,8 +295,7 @@
               "RelativeToolTip": "MercatikaApp\\Services\\OrderApiService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:15:44.687Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:15:44.687Z"
             },
             {
               "$type": "Document",
@@ -318,8 +307,7 @@
               "RelativeToolTip": "MercatikaApp\\Models\\ProductDetail.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:14:49.949Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:14:49.949Z"
             },
             {
               "$type": "Document",
@@ -331,8 +319,7 @@
               "RelativeToolTip": "MercatikaApp\\Models\\Product.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:14:36.558Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:14:36.558Z"
             },
             {
               "$type": "Document",
@@ -344,8 +331,7 @@
               "RelativeToolTip": "MercatikaApp\\Models\\OrderDetail.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:14:25.179Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:14:25.179Z"
             },
             {
               "$type": "Document",
@@ -357,8 +343,7 @@
               "RelativeToolTip": "MercatikaApp\\Models\\Order.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:14:12.173Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:14:12.173Z"
             },
             {
               "$type": "Document",
@@ -370,8 +355,7 @@
               "RelativeToolTip": "MercatikaApp\\Models\\Employee.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:13:58.239Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:13:58.239Z"
             },
             {
               "$type": "Document",
@@ -383,8 +367,7 @@
               "RelativeToolTip": "MercatikaApp\\Models\\Client.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:13:45.378Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:13:45.378Z"
             },
             {
               "$type": "Document",
@@ -396,8 +379,7 @@
               "RelativeToolTip": "MercatikaApp\\Models\\Category.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:13:32.649Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:13:32.649Z"
             },
             {
               "$type": "Document",
@@ -409,8 +391,7 @@
               "RelativeToolTip": "MercatikaApp\\AppConfig.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:12:21.604Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:12:21.604Z"
             },
             {
               "$type": "Document",
@@ -422,8 +403,7 @@
               "RelativeToolTip": "MercatikaApp\\AssemblyInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T09:30:53.773Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T09:30:53.773Z"
             },
             {
               "$type": "Document",
@@ -435,8 +415,7 @@
               "RelativeToolTip": "MercatikaApp\\App.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T09:34:24.724Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T09:34:24.724Z"
             },
             {
               "$type": "Document",
@@ -448,8 +427,7 @@
               "RelativeToolTip": "MercatikaApp\\LoginWindow.xaml.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAqwCAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T09:28:35.339Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T09:28:35.339Z"
             },
             {
               "$type": "Document",
@@ -460,8 +438,7 @@
               "ToolTip": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\LoginWindow.xaml",
               "RelativeToolTip": "MercatikaApp\\LoginWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-28T09:21:42.531Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T09:21:42.531Z"
             },
             {
               "$type": "Document",
@@ -484,8 +461,7 @@
               "ToolTip": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\MainWindow.xaml",
               "RelativeToolTip": "MercatikaApp\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-28T08:57:21.793Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T08:57:21.793Z"
             },
             {
               "$type": "Document",
@@ -497,8 +473,7 @@
               "RelativeToolTip": "MercatikaApp\\MainWindow.xaml.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T08:57:21.747Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T08:57:21.747Z"
             }
           ]
         }

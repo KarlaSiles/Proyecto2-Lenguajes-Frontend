@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MercatikaApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+24a5ed6a74d6cf83f2715bb23b6daf8aa3682bfd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ab419f61b06d813a4dcaae45914f0245936f3f8")]
 [assembly: System.Reflection.AssemblyProductAttribute("MercatikaApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MercatikaApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

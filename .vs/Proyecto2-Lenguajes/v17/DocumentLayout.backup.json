@@ -95,10 +95,6 @@
       "RelativeMoniker": "D:0:0:{F4521E04-5FC9-473C-8BEC-FF8575DEFB81}|MercatikaApp\\MercatikaApp.csproj|solutionrelative:mercatikaapp\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F4521E04-5FC9-473C-8BEC-FF8575DEFB81}|MercatikaApp\\MercatikaApp.csproj|c:\\users\\scorp\\wpf works\\proyecto2-lenguajes-frontend\\mercatikaapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F4521E04-5FC9-473C-8BEC-FF8575DEFB81}|MercatikaApp\\MercatikaApp.csproj|solutionrelative:mercatikaapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F4521E04-5FC9-473C-8BEC-FF8575DEFB81}|MercatikaApp\\MercatikaApp.csproj|c:\\users\\scorp\\wpf works\\proyecto2-lenguajes-frontend\\mercatikaapp\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F4521E04-5FC9-473C-8BEC-FF8575DEFB81}|MercatikaApp\\MercatikaApp.csproj|solutionrelative:mercatikaapp\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -122,7 +118,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 16,
           "Children": [
             {
               "$type": "Bookmark",
@@ -150,15 +146,97 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClientsUcView.xaml",
+              "DocumentMoniker": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\Views\\ClientsUcView.xaml",
+              "RelativeDocumentMoniker": "MercatikaApp\\Views\\ClientsUcView.xaml",
+              "ToolTip": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\Views\\ClientsUcView.xaml",
+              "RelativeToolTip": "MercatikaApp\\Views\\ClientsUcView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-28T10:21:44.094Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductsUcView.xaml",
+              "DocumentMoniker": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\Views\\ProductsUcView.xaml",
+              "RelativeDocumentMoniker": "MercatikaApp\\Views\\ProductsUcView.xaml",
+              "ToolTip": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\Views\\ProductsUcView.xaml",
+              "RelativeToolTip": "MercatikaApp\\Views\\ProductsUcView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-28T10:21:23.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ReportViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\ViewModel\\ReportViewModel.cs",
+              "RelativeDocumentMoniker": "MercatikaApp\\ViewModel\\ReportViewModel.cs",
+              "ToolTip": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\ViewModel\\ReportViewModel.cs",
+              "RelativeToolTip": "MercatikaApp\\ViewModel\\ReportViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T10:18:01.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\ViewModel\\ProductViewModel.cs",
+              "RelativeDocumentMoniker": "MercatikaApp\\ViewModel\\ProductViewModel.cs",
+              "ToolTip": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\ViewModel\\ProductViewModel.cs",
+              "RelativeToolTip": "MercatikaApp\\ViewModel\\ProductViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T10:17:47.943Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrderViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\ViewModel\\OrderViewModel.cs",
+              "RelativeDocumentMoniker": "MercatikaApp\\ViewModel\\OrderViewModel.cs",
+              "ToolTip": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\ViewModel\\OrderViewModel.cs",
+              "RelativeToolTip": "MercatikaApp\\ViewModel\\OrderViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T10:17:35.298Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ClientViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\ViewModel\\ClientViewModel.cs",
+              "RelativeDocumentMoniker": "MercatikaApp\\ViewModel\\ClientViewModel.cs",
+              "ToolTip": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\ViewModel\\ClientViewModel.cs",
+              "RelativeToolTip": "MercatikaApp\\ViewModel\\ClientViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T10:17:21.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ClientApiService.cs",
+              "DocumentMoniker": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\Services\\ClientApiService.cs",
+              "RelativeDocumentMoniker": "MercatikaApp\\Services\\ClientApiService.cs",
+              "ToolTip": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\Services\\ClientApiService.cs",
+              "RelativeToolTip": "MercatikaApp\\Services\\ClientApiService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T10:16:45.229Z"
             },
             {
               "$type": "Document",
@@ -181,97 +259,7 @@
               "ToolTip": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\Views\\OrdersUcView.xaml",
               "RelativeToolTip": "MercatikaApp\\Views\\OrdersUcView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-28T10:22:17.75Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ClientsUcView.xaml",
-              "DocumentMoniker": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\Views\\ClientsUcView.xaml",
-              "RelativeDocumentMoniker": "MercatikaApp\\Views\\ClientsUcView.xaml",
-              "ToolTip": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\Views\\ClientsUcView.xaml",
-              "RelativeToolTip": "MercatikaApp\\Views\\ClientsUcView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-28T10:21:44.094Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProductsUcView.xaml",
-              "DocumentMoniker": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\Views\\ProductsUcView.xaml",
-              "RelativeDocumentMoniker": "MercatikaApp\\Views\\ProductsUcView.xaml",
-              "ToolTip": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\Views\\ProductsUcView.xaml",
-              "RelativeToolTip": "MercatikaApp\\Views\\ProductsUcView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-28T10:21:23.044Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ReportViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\ViewModel\\ReportViewModel.cs",
-              "RelativeDocumentMoniker": "MercatikaApp\\ViewModel\\ReportViewModel.cs",
-              "ToolTip": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\ViewModel\\ReportViewModel.cs",
-              "RelativeToolTip": "MercatikaApp\\ViewModel\\ReportViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:18:01.72Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ProductViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\ViewModel\\ProductViewModel.cs",
-              "RelativeDocumentMoniker": "MercatikaApp\\ViewModel\\ProductViewModel.cs",
-              "ToolTip": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\ViewModel\\ProductViewModel.cs",
-              "RelativeToolTip": "MercatikaApp\\ViewModel\\ProductViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:17:47.943Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "OrderViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\ViewModel\\OrderViewModel.cs",
-              "RelativeDocumentMoniker": "MercatikaApp\\ViewModel\\OrderViewModel.cs",
-              "ToolTip": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\ViewModel\\OrderViewModel.cs",
-              "RelativeToolTip": "MercatikaApp\\ViewModel\\OrderViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:17:35.298Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ClientViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\ViewModel\\ClientViewModel.cs",
-              "RelativeDocumentMoniker": "MercatikaApp\\ViewModel\\ClientViewModel.cs",
-              "ToolTip": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\ViewModel\\ClientViewModel.cs",
-              "RelativeToolTip": "MercatikaApp\\ViewModel\\ClientViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:17:21.773Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ClientApiService.cs",
-              "DocumentMoniker": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\Services\\ClientApiService.cs",
-              "RelativeDocumentMoniker": "MercatikaApp\\Services\\ClientApiService.cs",
-              "ToolTip": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\Services\\ClientApiService.cs",
-              "RelativeToolTip": "MercatikaApp\\Services\\ClientApiService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:16:45.229Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:22:17.75Z"
             },
             {
               "$type": "Document",
@@ -283,8 +271,7 @@
               "RelativeToolTip": "MercatikaApp\\Services\\ReportApiService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:16:20.458Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:16:20.458Z"
             },
             {
               "$type": "Document",
@@ -296,8 +283,7 @@
               "RelativeToolTip": "MercatikaApp\\Services\\ProductApiService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:16:07.521Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:16:07.521Z"
             },
             {
               "$type": "Document",
@@ -309,8 +295,7 @@
               "RelativeToolTip": "MercatikaApp\\Services\\OrderApiService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:15:44.687Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:15:44.687Z"
             },
             {
               "$type": "Document",
@@ -322,8 +307,7 @@
               "RelativeToolTip": "MercatikaApp\\Models\\ProductDetail.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:14:49.949Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:14:49.949Z"
             },
             {
               "$type": "Document",
@@ -335,8 +319,7 @@
               "RelativeToolTip": "MercatikaApp\\Models\\Product.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:14:36.558Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:14:36.558Z"
             },
             {
               "$type": "Document",
@@ -348,8 +331,7 @@
               "RelativeToolTip": "MercatikaApp\\Models\\OrderDetail.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:14:25.179Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:14:25.179Z"
             },
             {
               "$type": "Document",
@@ -361,8 +343,7 @@
               "RelativeToolTip": "MercatikaApp\\Models\\Order.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:14:12.173Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:14:12.173Z"
             },
             {
               "$type": "Document",
@@ -374,8 +355,7 @@
               "RelativeToolTip": "MercatikaApp\\Models\\Employee.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:13:58.239Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:13:58.239Z"
             },
             {
               "$type": "Document",
@@ -387,8 +367,7 @@
               "RelativeToolTip": "MercatikaApp\\Models\\Client.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:13:45.378Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:13:45.378Z"
             },
             {
               "$type": "Document",
@@ -400,8 +379,7 @@
               "RelativeToolTip": "MercatikaApp\\Models\\Category.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:13:32.649Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:13:32.649Z"
             },
             {
               "$type": "Document",
@@ -413,8 +391,7 @@
               "RelativeToolTip": "MercatikaApp\\AppConfig.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T10:12:21.604Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T10:12:21.604Z"
             },
             {
               "$type": "Document",
@@ -426,21 +403,7 @@
               "RelativeToolTip": "MercatikaApp\\AssemblyInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T09:30:53.773Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\appsettings.json",
-              "RelativeDocumentMoniker": "MercatikaApp\\appsettings.json",
-              "ToolTip": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\appsettings.json",
-              "RelativeToolTip": "MercatikaApp\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-28T10:12:19.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T09:30:53.773Z"
             },
             {
               "$type": "Document",
@@ -452,12 +415,11 @@
               "RelativeToolTip": "MercatikaApp\\App.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T09:34:24.724Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T09:34:24.724Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 24,
               "Title": "LoginWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\LoginWindow.xaml.cs",
               "RelativeDocumentMoniker": "MercatikaApp\\LoginWindow.xaml.cs",
@@ -465,20 +427,18 @@
               "RelativeToolTip": "MercatikaApp\\LoginWindow.xaml.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAqwCAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T09:28:35.339Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T09:28:35.339Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 23,
               "Title": "LoginWindow.xaml",
               "DocumentMoniker": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\LoginWindow.xaml",
               "RelativeDocumentMoniker": "MercatikaApp\\LoginWindow.xaml",
               "ToolTip": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\LoginWindow.xaml",
               "RelativeToolTip": "MercatikaApp\\LoginWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-28T09:21:42.531Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T09:21:42.531Z"
             },
             {
               "$type": "Document",
@@ -494,19 +454,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 26,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MercatikaApp\\MainWindow.xaml",
               "ToolTip": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\MainWindow.xaml",
               "RelativeToolTip": "MercatikaApp\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-28T08:57:21.793Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T08:57:21.793Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 25,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\scorp\\WPF works\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MercatikaApp\\MainWindow.xaml.cs",
@@ -514,8 +473,7 @@
               "RelativeToolTip": "MercatikaApp\\MainWindow.xaml.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T08:57:21.747Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-28T08:57:21.747Z"
             }
           ]
         }
