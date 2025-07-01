@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MercatikaApp.ViewModel;
 
 namespace MercatikaApp.Views
 {
@@ -23,6 +24,15 @@ namespace MercatikaApp.Views
         public ClientsUcView()
         {
             InitializeComponent();
+            DataContext = new ClientViewModel(); 
+            Loaded += async (s, e) => await LoadData();
+        }
+        private async Task LoadData()
+        {
+            if (DataContext is ClientViewModel viewModel)
+            {
+                await viewModel.LoadClientsAsync();
+            }
         }
     }
 }

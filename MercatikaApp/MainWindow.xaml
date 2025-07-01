@@ -107,12 +107,8 @@
                     <MenuItem Header="Add product Detail" Style="{StaticResource SubMenuItem}"/>
                 </MenuItem>
 
-                <MenuItem Header="Clientes" Style="{StaticResource MainMenuItem}">
-                    <MenuItem Header="Lista de clientes" Style="{StaticResource SubMenuItem}"/>
-                    <MenuItem Header="Agregar cliente" Style="{StaticResource SubMenuItem}"/>
-                    <MenuItem Header="Estadísticas" Style="{StaticResource SubMenuItem}"/>
-                    <Separator/>
-                    <MenuItem Header="Programa de fidelidad" Style="{StaticResource SubMenuItem}"/>
+                <MenuItem Header="Clients" Style="{StaticResource MainMenuItem}">
+                    <MenuItem Header="Customer management" Style="{StaticResource SubMenuItem}" Click="CustomerManagement_Click"/>/>
                 </MenuItem>
 
                 <MenuItem Header="Reportes" Style="{StaticResource MainMenuItem}">

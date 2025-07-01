@@ -3,10 +3,39 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:MercatikaApp.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Barra de búsqueda simplificada pero funcional -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="5">
+            <TextBox Width="300" Text="{Binding SearchTerm, UpdateSourceTrigger=PropertyChanged}" 
+                    Margin="5" VerticalContentAlignment="Center"/>
+
+            <Button Content="Buscar" Margin="5" Command="{Binding SearchCommand}"/>
+            <Button Content="Limpiar" Margin="5" Command="{Binding ClearSearchCommand}"/>
+            <Button Content="Agregar" Margin="5" Command="{Binding OpenAddClientWindowCommand}"/>
+            <Button Content="Editar" Margin="5" Command="{Binding OpenEditClientWindowCommand}" 
+                    IsEnabled="{Binding IsClientSelected}"/>
+            <Button Content="Eliminar" Margin="5" Command="{Binding DeleteClientCommand}" 
+                    IsEnabled="{Binding IsClientSelected}"/>
+        </StackPanel>
+
+        <!-- Lista de clientes -->
+        <DataGrid Grid.Row="1" ItemsSource="{Binding FilteredClients}" SelectedItem="{Binding SelectedClient}"
+                 AutoGenerateColumns="False" IsReadOnly="True" Margin="5" SelectionMode="Single">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ClientId}" Width="Auto"/>
+                <DataGridTextColumn Header="Empresa" Binding="{Binding CompanyName}" Width="*"/>
+                <DataGridTextColumn Header="Contacto" Binding="{Binding ContractName}" Width="*"/>
+                <DataGridTextColumn Header="Apellido" Binding="{Binding ContractLastname}" Width="*"/>
+                <DataGridTextColumn Header="Teléfono" Binding="{Binding Phone}" Width="*"/>
+                <DataGridTextColumn Header="Ciudad" Binding="{Binding City}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </UserControl>

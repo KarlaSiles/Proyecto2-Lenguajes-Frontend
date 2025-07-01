@@ -219,3 +219,5 @@ C:\Users\beth_\source\repos\Proyecto2_Lenguajes_FrontendWPF\MercatikaApp\obj\Deb
 C:\Users\beth_\source\repos\Proyecto2_Lenguajes_FrontendWPF\MercatikaApp\obj\Debug\net8.0-windows\MercatikaApp.pdb
 C:\Users\beth_\source\repos\Proyecto2_Lenguajes_FrontendWPF\MercatikaApp\obj\Debug\net8.0-windows\MercatikaApp.genruntimeconfig.cache
 C:\Users\beth_\source\repos\Proyecto2_Lenguajes_FrontendWPF\MercatikaApp\obj\Debug\net8.0-windows\ref\MercatikaApp.dll
+C:\Users\beth_\source\repos\Proyecto2_Lenguajes_FrontendWPF\MercatikaApp\obj\Debug\net8.0-windows\Views\ClientEditWindow.baml
+C:\Users\beth_\source\repos\Proyecto2_Lenguajes_FrontendWPF\MercatikaApp\obj\Debug\net8.0-windows\Views\ClientEditWindow.g.cs

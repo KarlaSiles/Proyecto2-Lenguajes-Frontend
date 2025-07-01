@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\beth_\source\repos\Proyecto2_Lenguajes_FrontendWPF\MercatikaApp\App.xaml
-10-1204282510
+11-2023110011
 11413424753
-351192657078
+38506415057
 210-2112148239
-LoginWindow.xaml;MainWindow.xaml;Views\ClientsUcView.xaml;Views\InsertProductDetailView.xaml;Views\OrdersCreateView.xaml;Views\OrdersListView.xaml;Views\OrdersUcView.xaml;Views\ProductInsertView.xaml;Views\ProductView.xaml;Views\ReportsUcView.xaml;
+LoginWindow.xaml;MainWindow.xaml;Views\ClientEditWindow.xaml;Views\ClientsUcView.xaml;Views\InsertProductDetailView.xaml;Views\OrdersCreateView.xaml;Views\OrdersListView.xaml;Views\OrdersUcView.xaml;Views\ProductInsertView.xaml;Views\ProductView.xaml;Views\ReportsUcView.xaml;
 
 False
 

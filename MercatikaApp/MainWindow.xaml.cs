@@ -55,6 +55,15 @@ namespace MercatikaApp
             MainContentFrame.Content = historialVista;
         }
 
+        private void CustomerManagement_Click(object sender, RoutedEventArgs e)
+        {
+            // Limpia la navegación anterior (opcional)
+            MainContentFrame.NavigationService?.RemoveBackEntry();
+
+            // Navega a la vista de gestión de clientes
+            MainContentFrame.Navigate(new ClientsUcView());
+        }
+    
         private void LogOut_Click(object sender, RoutedEventArgs e)
         {
             var login = new LoginWindow();
