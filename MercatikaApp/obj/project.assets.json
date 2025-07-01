@@ -824,23 +824,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gsile\\.nuget\\packages\\": {},
+    "C:\\Users\\Usuario\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Lenguajes\\Proyectos\\Project 2\\Código\\Frontend\\Front Products 85%\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\MercatikaApp.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Universidad\\Año 3\\Lenguajes\\Proyecto 2\\Frontend 5\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\MercatikaApp.csproj",
       "projectName": "MercatikaApp",
-      "projectPath": "D:\\Lenguajes\\Proyectos\\Project 2\\Código\\Frontend\\Front Products 85%\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\MercatikaApp.csproj",
-      "packagesPath": "C:\\Users\\gsile\\.nuget\\packages\\",
-      "outputPath": "D:\\Lenguajes\\Proyectos\\Project 2\\Código\\Frontend\\Front Products 85%\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\obj\\",
+      "projectPath": "C:\\Users\\Usuario\\Desktop\\Universidad\\Año 3\\Lenguajes\\Proyecto 2\\Frontend 5\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\MercatikaApp.csproj",
+      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Usuario\\Desktop\\Universidad\\Año 3\\Lenguajes\\Proyecto 2\\Frontend 5\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\gsile\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

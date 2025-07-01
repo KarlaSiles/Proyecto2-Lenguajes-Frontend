@@ -9,6 +9,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MercatikaApp.ViewModel;
 
 namespace MercatikaApp
 {
@@ -30,6 +31,28 @@ namespace MercatikaApp
         {
             var detailWindow = new InsertProductDetailView();
             detailWindow.Show();
+        }
+
+        private void NuevoPedido_Click(object sender, RoutedEventArgs e)
+        {
+            var nuevaVista = new OrdersCreateView();
+            if (nuevaVista.DataContext is OrderViewModel vm)
+            {
+                vm.NewOrderCommand.Execute(null); // activa el modo creación
+            }
+
+            MainContentFrame.Content = nuevaVista;
+        }
+
+        private void Historial_Click(object sender, RoutedEventArgs e)
+        {
+            var historialVista = new OrdersListView();
+            if (historialVista.DataContext is OrderViewModel vm)
+            {
+                vm.BackToListCommand.Execute(null); // activa el modo lista
+            }
+
+            MainContentFrame.Content = historialVista;
         }
 
         private void LogOut_Click(object sender, RoutedEventArgs e)

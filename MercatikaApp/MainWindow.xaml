@@ -2,48 +2,136 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Mercatika" Height="450" Width="800"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        Background="White">
+
+    <Window.Resources>
+        <!-- Estilo para los ítems principales del menú -->
+        <Style x:Key="MainMenuItem" TargetType="MenuItem">
+            <Setter Property="Foreground" Value="#FF333333"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="15,8"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Style.Triggers>
+                <Trigger Property="IsHighlighted" Value="True">
+                    <Setter Property="Background" Value="#FFF5F5F5"/>
+                    <Setter Property="Foreground" Value="#FFE67C00"/>
+                    <!-- Naranja -->
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Estilo para los subítems del menú -->
+        <Style x:Key="SubMenuItem" TargetType="MenuItem">
+            <Setter Property="Foreground" Value="#FF555555"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="10,5,20,5"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Style.Triggers>
+                <Trigger Property="IsHighlighted" Value="True">
+                    <Setter Property="Background" Value="#FFF0F7FF"/>
+                    <Setter Property="Foreground" Value="#FF0078D7"/>
+                    <!-- Azul -->
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Estilo para los separadores -->
+        <Style TargetType="Separator">
+            <Setter Property="Background" Value="#FFEEEEEE"/>
+            <Setter Property="Margin" Value="5,0"/>
+            <Setter Property="Height" Value="1"/>
+        </Style>
+
+        <!-- Estilo para el botón -->
+        <Style x:Key="OrangeButton" TargetType="Button">
+            <Setter Property="Background" Value="#FFE67C00"/>
+            <!-- Naranja -->
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="BorderBrush" Value="#FFD26900"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FFD26900"/>
+                    <!-- Naranja más oscuro -->
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
     <DockPanel>
-        <!-- Área superior: Título + botón Cerrar sesión + Menú -->
-        <StackPanel DockPanel.Dock="Top">
-            <!-- Fila con título y botón -->
-            <Grid Margin="0,5">
+        <!-- Área superior con título y menú -->
+        <StackPanel DockPanel.Dock="Top" Background="White">
+            <!-- Barra de título con logo y botón -->
+            <Grid Margin="0,5" Height="40">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
-                <!-- Texto centrado -->
-                <TextBlock Text="Mercatika"
-                           FontSize="24" FontWeight="Bold"
-                           HorizontalAlignment="Center"
-                           Grid.ColumnSpan="2"/>
+                <!-- Imagen del logo (reemplaza "logo.png" con tu archivo) -->
+                <Image Source="Resources/LogoMK.png" 
+                       Stretch="Uniform"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Grid.ColumnSpan="2"/>
 
-                <!-- Botón Cerrar sesión -->
-                <Button Content="Log Out"
+                <Button x:Name="LogOutButton"
+                        Content="Cerrar sesión"
                         Grid.Column="1"
                         HorizontalAlignment="Right"
                         Margin="0,0,10,0"
-                        Padding="5,2"
-                        Click="LogOut_Click"/>
+                        Style="{StaticResource OrangeButton}"/>
             </Grid>
 
-            <!-- Menú horizontal -->
-            <Menu>
-                <MenuItem Header="Orders"/>
-                <MenuItem Header="Products">
-                    <MenuItem Header="Abrir Gestión de Productos" Click="AbrirProducto_Click"/>
-                    <MenuItem Header="Abrir Gestión de Detalles" Click="BtnInsertDetail_Click"/>
+            <!-- Menú principal -->
+            <Menu Background="White">
+                <MenuItem Header="Pedidos" Style="{StaticResource MainMenuItem}">
+                    <MenuItem Header="Nuevo pedido" Style="{StaticResource SubMenuItem}" Click="NuevoPedido_Click"/>
+                    <MenuItem Header="Historial" Style="{StaticResource SubMenuItem}" Click="Historial_Click"/>
+                    <MenuItem Header="Pendientes" Style="{StaticResource SubMenuItem}"/>
+                    <Separator/>
+                    <MenuItem Header="Estadísticas" Style="{StaticResource SubMenuItem}"/>
                 </MenuItem>
-                <MenuItem Header="Clients"/>
-                <MenuItem Header="Reports"/>
+
+                <MenuItem Header="Productos" Style="{StaticResource MainMenuItem}">
+                    <MenuItem Header="Catálogo" Style="{StaticResource SubMenuItem}" Click="BtnInsertDetail_Click"/>
+                    <MenuItem Header="Agregar producto" Style="{StaticResource SubMenuItem}" Click="AbrirProducto_Click"/>
+                    <MenuItem Header="Inventario" Style="{StaticResource SubMenuItem}"/>
+                    <Separator/>
+                    <MenuItem Header="Categorías" Style="{StaticResource SubMenuItem}"/>
+                </MenuItem>
+
+                <MenuItem Header="Clientes" Style="{StaticResource MainMenuItem}">
+                    <MenuItem Header="Lista de clientes" Style="{StaticResource SubMenuItem}"/>
+                    <MenuItem Header="Agregar cliente" Style="{StaticResource SubMenuItem}"/>
+                    <MenuItem Header="Estadísticas" Style="{StaticResource SubMenuItem}"/>
+                    <Separator/>
+                    <MenuItem Header="Programa de fidelidad" Style="{StaticResource SubMenuItem}"/>
+                </MenuItem>
+
+                <MenuItem Header="Reportes" Style="{StaticResource MainMenuItem}">
+                    <MenuItem Header="Ventas" Style="{StaticResource SubMenuItem}"/>
+                    <MenuItem Header="Financieros" Style="{StaticResource SubMenuItem}"/>
+                    <MenuItem Header="Personalizados" Style="{StaticResource SubMenuItem}"/>
+                    <Separator/>
+                    <MenuItem Header="Exportar datos" Style="{StaticResource SubMenuItem}"/>
+                </MenuItem>
             </Menu>
 
+            <!-- Barra decorativa naranja -->
+            <Border Height="3" Background="#FFE67C00"/>
         </StackPanel>
 
-        <!-- Resto del contenido -->
-        <Grid>
-            <!-- Aquí va el contenido principal -->
+        <!-- Área de contenido principal -->
+        <Grid Background="#FFF9F9F9">
+            <Frame x:Name="MainContentFrame" NavigationUIVisibility="Hidden"/>
         </Grid>
     </DockPanel>
 </Window>

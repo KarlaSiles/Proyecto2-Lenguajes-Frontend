@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="MercatikaApp.Views.OrdersListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:MercatikaApp.ViewModel"
+             xmlns:local="clr-namespace:MercatikaApp.Converters"
+             Background="White">
+
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+        <local:InverseBoolToVisibilityConverter x:Key="InverseBoolToVisibilityConverter" />
+    </UserControl.Resources>
+
+    <UserControl.DataContext>
+        <vm:OrderViewModel />
+    </UserControl.DataContext>
+
+    <Grid>
+        <!-- Vista Lista -->
+        <Grid Visibility="{Binding IsDetailMode, Converter={StaticResource InverseBoolToVisibilityConverter}}">
+            <DockPanel Margin="5">
+                <!-- Botón Recargar arriba del DataGrid -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" DockPanel.Dock="Top" Margin="0,0,0,10">
+                    <Button Content="Recargar" Command="{Binding LoadOrdersCommand}" Width="120" Height="30"/>
+                </StackPanel>
+
+                <DataGrid ItemsSource="{Binding Orders}"
+                          SelectedItem="{Binding SelectedOrder}"
+                          AutoGenerateColumns="False"
+                          IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding OrderId}" Width="Auto"/>
+                        <DataGridTextColumn Header="Cliente" Binding="{Binding ClientId}" Width="Auto"/>
+                        <DataGridTextColumn Header="Empleado" Binding="{Binding EmployeeId}" Width="Auto"/>
+                        <DataGridTextColumn Header="Fecha Orden" Binding="{Binding OrderDate, StringFormat=d}" Width="Auto"/>
+                        <DataGridTextColumn Header="Dirección" Binding="{Binding AddressTrip}" Width="200"/>
+                        <DataGridTextColumn Header="Provincia" Binding="{Binding ProvinceTrip}" Width="150"/>
+                        <DataGridTextColumn Header="País" Binding="{Binding CountryTrip}" Width="100"/>
+                    </DataGrid.Columns>
+
+                </DataGrid>
+            </DockPanel>
+        </Grid>
+
+        <!-- Vista Detalle -->
+        <Grid Visibility="{Binding IsDetailMode, Converter={StaticResource BoolToVisibilityConverter}}">
+            <StackPanel Margin="10">
+                <TextBlock Text="Detalle de Orden" FontSize="20" FontWeight="Bold" Margin="0,0,0,10" />
+                <TextBlock Text="{Binding SelectedOrder.OrderId, StringFormat=ID: {0}}" />
+                <TextBlock Text="{Binding SelectedOrder.ClientId, StringFormat=Cliente: {0}}" />
+                <TextBlock Text="{Binding SelectedOrder.EmployeeId, StringFormat=Empleado: {0}}" />
+                <TextBlock Text="{Binding SelectedOrder.AddressTrip, StringFormat=Dirección: {0}}" />
+                <TextBlock Text="{Binding SelectedOrder.ProvinceTrip, StringFormat=Provincia: {0}}" />
+                <TextBlock Text="{Binding SelectedOrder.CountryTrip, StringFormat=País: {0}}" />
+                <TextBlock Text="{Binding SelectedOrder.PhoneTrip, StringFormat=Teléfono: {0}}" />
+                <TextBlock Text="{Binding SelectedOrder.OrderDate, StringFormat=Fecha Orden: {0:d}}" />
+                <TextBlock Text="{Binding SelectedOrder.DateTrip, StringFormat=Fecha Viaje: {0:d}}" />
+                <TextBlock Text="Detalles del Pedido:" FontWeight="Bold" Margin="0,20,0,5" />
+
+                <DataGrid ItemsSource="{Binding OrderDetails}"
+                          AutoGenerateColumns="False"
+                          IsReadOnly="True"
+                          Height="150">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Orden ID" Binding="{Binding OrderId}" />
+                        <DataGridTextColumn Header="Producto ID" Binding="{Binding ProductDetailId}" />
+                        <DataGridTextColumn Header="Cantidad" Binding="{Binding Amount}" />
+                        <DataGridTextColumn Header="Precio total" Binding="{Binding LinePrice}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <Button Content="Editar" Margin="5" Width="80" Height="30"/>
+                    <Button Content="Eliminar" Margin="5" Width="80" Height="30"/>
+                    <Button Content="Volver" Command="{Binding BackToListCommand}" Margin="5" Width="80" Height="30"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

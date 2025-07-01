@@ -53,7 +53,7 @@ namespace MercatikaApp.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MercatikaApp;V1.0.0.0;component/views/productinsertview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MercatikaApp;component/views/productinsertview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\ProductInsertView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
