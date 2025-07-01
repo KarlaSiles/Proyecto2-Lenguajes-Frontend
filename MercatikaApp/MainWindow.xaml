@@ -8,17 +8,19 @@
     <Window.Resources>
         <!-- Estilo para los ítems principales del menú -->
         <Style x:Key="MainMenuItem" TargetType="MenuItem">
-            <Setter Property="Foreground" Value="#FF333333"/>
+            <Setter Property="Foreground" Value="#FF1F1F1F"/>
             <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="Padding" Value="15,8"/>
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Padding" Value="20,10"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
             <Style.Triggers>
                 <Trigger Property="IsHighlighted" Value="True">
-                    <Setter Property="Background" Value="#FFF5F5F5"/>
+                    <Setter Property="Background" Value="#FFFFF3E0"/>
                     <Setter Property="Foreground" Value="#FFE67C00"/>
-                    <!-- Naranja -->
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="#FF0078D7"/>
                 </Trigger>
             </Style.Triggers>
         </Style>
@@ -34,7 +36,6 @@
                 <Trigger Property="IsHighlighted" Value="True">
                     <Setter Property="Background" Value="#FFF0F7FF"/>
                     <Setter Property="Foreground" Value="#FF0078D7"/>
-                    <!-- Azul -->
                 </Trigger>
             </Style.Triggers>
         </Style>
@@ -49,7 +50,6 @@
         <!-- Estilo para el botón -->
         <Style x:Key="OrangeButton" TargetType="Button">
             <Setter Property="Background" Value="#FFE67C00"/>
-            <!-- Naranja -->
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="BorderThickness" Value="0"/>
             <Setter Property="Padding" Value="10,5"/>
@@ -59,53 +59,52 @@
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Background" Value="#FFD26900"/>
-                    <!-- Naranja más oscuro -->
                 </Trigger>
             </Style.Triggers>
         </Style>
     </Window.Resources>
 
     <DockPanel>
-        <!-- Área superior con título y menú -->
+        <!-- Encabezado superior -->
         <StackPanel DockPanel.Dock="Top" Background="White">
-            <!-- Barra de título con logo y botón -->
-            <Grid Margin="0,5" Height="40">
+            <!-- Encabezado con logo y botón cerrar sesión -->
+            <Grid Margin="10,5" Height="70">
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
-                <!-- Imagen del logo (reemplaza "logo.png" con tu archivo) -->
+                <!-- Imagen del logo -->
                 <Image Source="Resources/LogoMK.png" 
-                       Stretch="Uniform"
-                       HorizontalAlignment="Center"
+                       Height="60"
                        VerticalAlignment="Center"
-                       Grid.ColumnSpan="2"/>
+                       HorizontalAlignment="Left"
+                       Grid.Column="0"
+                       Margin="10,0"/>
 
+                <!-- Botón cerrar sesión -->
                 <Button x:Name="LogOutButton"
                         Content="Cerrar sesión"
-                        Grid.Column="1"
-                        HorizontalAlignment="Right"
+                        Grid.Column="2"
+                        VerticalAlignment="Center"
                         Margin="0,0,10,0"
                         Style="{StaticResource OrangeButton}"/>
             </Grid>
 
             <!-- Menú principal -->
-            <Menu Background="White">
+            <Menu Background="White" Margin="10,0">
                 <MenuItem Header="Pedidos" Style="{StaticResource MainMenuItem}">
-                    <MenuItem Header="Nuevo pedido" Style="{StaticResource SubMenuItem}" Click="NuevoPedido_Click"/>
-                    <MenuItem Header="Historial" Style="{StaticResource SubMenuItem}" Click="Historial_Click"/>
+                    <MenuItem Header="Nuevo pedido" Style="{StaticResource SubMenuItem}"/>
+                    <MenuItem Header="Historial" Style="{StaticResource SubMenuItem}"/>
                     <MenuItem Header="Pendientes" Style="{StaticResource SubMenuItem}"/>
                     <Separator/>
                     <MenuItem Header="Estadísticas" Style="{StaticResource SubMenuItem}"/>
                 </MenuItem>
 
-                <MenuItem Header="Productos" Style="{StaticResource MainMenuItem}">
-                    <MenuItem Header="Catálogo" Style="{StaticResource SubMenuItem}" Click="BtnInsertDetail_Click"/>
-                    <MenuItem Header="Agregar producto" Style="{StaticResource SubMenuItem}" Click="AbrirProducto_Click"/>
-                    <MenuItem Header="Inventario" Style="{StaticResource SubMenuItem}"/>
-                    <Separator/>
-                    <MenuItem Header="Categorías" Style="{StaticResource SubMenuItem}"/>
+                <MenuItem Header="Products" Style="{StaticResource MainMenuItem}">
+                    <MenuItem Header="Add product" Style="{StaticResource SubMenuItem}"/>
+                    <MenuItem Header="Add product Detail" Style="{StaticResource SubMenuItem}"/>
                 </MenuItem>
 
                 <MenuItem Header="Clientes" Style="{StaticResource MainMenuItem}">
@@ -126,12 +125,14 @@
             </Menu>
 
             <!-- Barra decorativa naranja -->
-            <Border Height="3" Background="#FFE67C00"/>
+            <Border Height="4" Background="#FFE67C00" Margin="0,0,0,5"/>
         </StackPanel>
 
-        <!-- Área de contenido principal -->
+        <!-- Contenido principal -->
         <Grid Background="#FFF9F9F9">
             <Frame x:Name="MainContentFrame" NavigationUIVisibility="Hidden"/>
         </Grid>
     </DockPanel>
 </Window>
+
+
