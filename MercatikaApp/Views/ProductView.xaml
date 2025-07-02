@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:MercatikaApp.ViewModel"
         mc:Ignorable="d"
-        Title="Gestión de Productos" Height="600" Width="800"
+        Title="Product management" Height="600" Width="800"
         Background="White"
         WindowStartupLocation="CenterScreen">
 
@@ -82,7 +82,7 @@
             <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0 0 0 10">
                 <TextBox Width="300"
                          Text="{Binding SearchTerm, UpdateSourceTrigger=PropertyChanged}" />
-                <Button Content="Buscar"
+                <Button Content="Search"
                         Width="80"
                         Command="{Binding SearchCommand}"
                         Style="{StaticResource OrangeButton}"/>
@@ -100,13 +100,13 @@
                     <DataGridTextColumn Header="ID"
                                         Binding="{Binding ProductId}"
                                         Width="50"/>
-                    <DataGridTextColumn Header="Nombre"
+                    <DataGridTextColumn Header="Name"
                                         Binding="{Binding ProductName}"
                                         Width="200"/>
-                    <DataGridTextColumn Header="Precio"
+                    <DataGridTextColumn Header="Price"
                                         Binding="{Binding Price}"
                                         Width="100"/>
-                    <DataGridTextColumn Header="Categoría"
+                    <DataGridTextColumn Header="Category"
                                         Binding="{Binding CategoryCode.Description}"
                                         Width="150"/>
                 </DataGrid.Columns>
@@ -115,31 +115,31 @@
             <!-- Formularios y acciones -->
             <StackPanel Grid.Row="2" Orientation="Vertical">
                 <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
-                    <TextBlock Text="Nombre:" Width="60" Style="{StaticResource LabelStyle}"/>
+                    <TextBlock Text="Name:" Width="60" Style="{StaticResource LabelStyle}"/>
                     <TextBox Width="200"
                              Text="{Binding SelectedProduct.ProductName, UpdateSourceTrigger=PropertyChanged}"/>
 
-                    <TextBlock Text="Precio:" Width="60" Style="{StaticResource LabelStyle}"/>
+                    <TextBlock Text="Price:" Width="60" Style="{StaticResource LabelStyle}"/>
                     <TextBox Width="100"
                              Text="{Binding SelectedProduct.Price, UpdateSourceTrigger=PropertyChanged, TargetNullValue=0}" />
 
-                    <TextBlock Text="Categoría ID:" Width="80" Style="{StaticResource LabelStyle}"/>
+                    <TextBlock Text="Category ID:" Width="80" Style="{StaticResource LabelStyle}"/>
                     <TextBox Width="50"
                              Text="{Binding SelectedProduct.CategoryCode.CategoryCode, UpdateSourceTrigger=PropertyChanged, TargetNullValue=0}" />
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                    <Button Content="Insertar"
+                    <Button Content="Insert"
                             Width="100"
                             Click="AbrirInsertarProducto_Click"
                             Style="{StaticResource OrangeButton}"/>
 
-                    <Button Content="Actualizar"
+                    <Button Content="Update"
                             Width="100"
                             Command="{Binding UpdateCommand}"
                             Style="{StaticResource OrangeButton}"/>
 
-                    <Button Content="Eliminar"
+                    <Button Content="Delete"
                             Width="100"
                             Command="{Binding DeleteCommand}"
                             Style="{StaticResource OrangeButton}"/>

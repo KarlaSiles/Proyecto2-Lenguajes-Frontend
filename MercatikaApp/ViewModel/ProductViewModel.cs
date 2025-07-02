@@ -69,21 +69,21 @@ namespace MercatikaApp.ViewModel
 
         private async Task LoadProductsAsync()
         {
-            var products = await _productService.SearchProductsAsync(""); // Cargar todos
+            var products = await _productService.SearchProductsAsync(""); 
             Products.Clear();
             foreach (var product in products)
                 Products.Add(product);
 
-            await LoadCategoriesAsync(); // NUEVO: Cargar categorías al cargar productos
+            await LoadCategoriesAsync(); 
         }
 
         private async Task AddProductAsync()
         {
             bool creado = await _productService.CreateProductAsync(SelectedProduct);
             if (creado)
-                MessageBox.Show("Producto insertado correctamente");
+                MessageBox.Show("Product inserted correctly");
             else
-                MessageBox.Show("Error al insertar producto");
+                MessageBox.Show("Error inserting product");
 
             await LoadProductsAsync();
 
@@ -98,9 +98,9 @@ namespace MercatikaApp.ViewModel
         {
             bool actualizado = await _productService.UpdateProductAsync(SelectedProduct);
             if (actualizado)
-                MessageBox.Show("Producto actualizado correctamente");
+                MessageBox.Show("Successfully updated product");
             else
-                MessageBox.Show("Error al actualizar producto");
+                MessageBox.Show("Error updating product");
 
             await LoadProductsAsync();
         }
@@ -111,9 +111,9 @@ namespace MercatikaApp.ViewModel
             {
                 bool eliminado = await _productService.DeleteProductAsync(SelectedProduct.ProductId);
                 if (eliminado)
-                    MessageBox.Show("Producto eliminado correctamente");
+                    MessageBox.Show("Product disposed correctly");
                 else
-                    MessageBox.Show("Error al eliminar producto");
+                    MessageBox.Show("Product deletion error");
 
                 await LoadProductsAsync();
                 SelectedProduct = new Product

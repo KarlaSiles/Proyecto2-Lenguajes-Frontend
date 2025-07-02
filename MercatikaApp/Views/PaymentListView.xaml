@@ -18,14 +18,14 @@
 
         <!-- Filtros -->
         <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0 0 0 10">
-            <TextBlock Text="ID Orden:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+            <TextBlock Text="ID Order:" VerticalAlignment="Center" Margin="0,0,5,0"/>
             <TextBox Width="80" Text="{Binding SearchId, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,10,0"/>
 
-            <TextBlock Text="Estado:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+            <TextBlock Text="State:" VerticalAlignment="Center" Margin="0,0,5,0"/>
             <TextBox Width="120" Text="{Binding SearchStatus, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,10,0"/>
 
-            <Button Content="Filtrar" Command="{Binding FilterCommand}" Width="80"/>
-            <Button Content="Recargar" Command="{Binding LoadPaymentsCommand}" Width="80" Margin="5,0,0,0"/>
+            <Button Content="Filter" Command="{Binding FilterCommand}" Width="80"/>
+            <Button Content="Recharge" Command="{Binding LoadPaymentsCommand}" Width="80" Margin="5,0,0,0"/>
         </StackPanel>
 
         <!-- Lista de pagos -->
@@ -37,19 +37,19 @@
                   IsReadOnly="True"
                   Margin="0,0,0,10">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Pago ID" Binding="{Binding PaymentId}" Width="Auto"/>
-                <DataGridTextColumn Header="Orden ID" Binding="{Binding OrderId}" Width="Auto"/>
-                <DataGridTextColumn Header="Monto" Binding="{Binding PaymentAmount}" Width="Auto"/>
-                <DataGridTextColumn Header="Estado" Binding="{Binding Estado}" Width="Auto"/>
-                <DataGridTextColumn Header="Método" Binding="{Binding PaymentMethodName}" Width="Auto"/>
-                <DataGridTextColumn Header="Tarjeta" Binding="{Binding CreditCardNum}" Width="Auto"/>
-                <DataGridTextColumn Header="Fecha Pago" Binding="{Binding DatePayment}" Width="Auto"/>
+                <DataGridTextColumn Header="Payment ID" Binding="{Binding PaymentId}" Width="Auto"/>
+                <DataGridTextColumn Header="Order ID" Binding="{Binding OrderId}" Width="Auto"/>
+                <DataGridTextColumn Header="Amount" Binding="{Binding PaymentAmount}" Width="Auto"/>
+                <DataGridTextColumn Header="State" Binding="{Binding Estado}" Width="Auto"/>
+                <DataGridTextColumn Header="Method" Binding="{Binding PaymentMethodName}" Width="Auto"/>
+                <DataGridTextColumn Header="Card" Binding="{Binding CreditCardNum}" Width="Auto"/>
+                <DataGridTextColumn Header="Payment date" Binding="{Binding DatePayment}" Width="Auto"/>
             </DataGrid.Columns>
         </DataGrid>
 
         <!-- Botón pagar -->
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left">
-            <Button Content="Pagar esta cuenta"
+            <Button Content="Pay this bill"
                     Command="{Binding PaySelectedCommand}"
                     Width="150"
                     Height="35"/>

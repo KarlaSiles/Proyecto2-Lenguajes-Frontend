@@ -1,41 +1,87 @@
 ﻿<UserControl x:Class="MercatikaApp.Views.ClientsUcView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="600" d:DesignWidth="1000">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!-- Barra de búsqueda simplificada pero funcional -->
-        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="5">
-            <TextBox Width="300" Text="{Binding SearchTerm, UpdateSourceTrigger=PropertyChanged}" 
-                    Margin="5" VerticalContentAlignment="Center"/>
+        <!-- Barra de herramientas con borde azul -->
+        <Border Grid.Row="0" Background="#3498DB" Margin="5">
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBox Width="200" Text="{Binding SearchTerm, UpdateSourceTrigger=PropertyChanged}" 
+                        Margin="5" VerticalContentAlignment="Center"/>
+                <Button Content="Search" Margin="5" Command="{Binding SearchCommand}"/>
+                <Button Content="Clear" Margin="5" Command="{Binding ClearSearchCommand}"/>
+                <Button Content="Add client" Margin="5" Command="{Binding OpenAddClientWindowCommand}"/>
+                <Button Content="Edit client" Margin="5" Command="{Binding OpenEditClientWindowCommand}" 
+                        IsEnabled="{Binding IsClientSelected}"/>
+                <Button Content="Delete client" Margin="5" Command="{Binding DeleteClientCommand}" 
+                        IsEnabled="{Binding IsClientSelected}"/>
+            </StackPanel>
+        </Border>
 
-            <Button Content="Buscar" Margin="5" Command="{Binding SearchCommand}"/>
-            <Button Content="Limpiar" Margin="5" Command="{Binding ClearSearchCommand}"/>
-            <Button Content="Agregar" Margin="5" Command="{Binding OpenAddClientWindowCommand}"/>
-            <Button Content="Editar" Margin="5" Command="{Binding OpenEditClientWindowCommand}" 
-                    IsEnabled="{Binding IsClientSelected}"/>
-            <Button Content="Eliminar" Margin="5" Command="{Binding DeleteClientCommand}" 
-                    IsEnabled="{Binding IsClientSelected}"/>
-        </StackPanel>
+        <!-- DataGrid con todos los campos del cliente -->
+        <DataGrid Grid.Row="1" 
+                 ItemsSource="{Binding FilteredClients}"
+                 SelectedItem="{Binding SelectedClient}"
+                 AutoGenerateColumns="False"
+                 IsReadOnly="True"
+                 Margin="5"
+                 SelectionMode="Single"
+                 AlternatingRowBackground="#F5F5F5"
+                 GridLinesVisibility="None"
+                 RowBackground="White"
+                 FontSize="12"
+                 HeadersVisibility="Column">
 
-        <!-- Lista de clientes -->
-        <DataGrid Grid.Row="1" ItemsSource="{Binding FilteredClients}" SelectedItem="{Binding SelectedClient}"
-                 AutoGenerateColumns="False" IsReadOnly="True" Margin="5" SelectionMode="Single">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding ClientId}" Width="Auto"/>
-                <DataGridTextColumn Header="Empresa" Binding="{Binding CompanyName}" Width="*"/>
-                <DataGridTextColumn Header="Contacto" Binding="{Binding ContractName}" Width="*"/>
-                <DataGridTextColumn Header="Apellido" Binding="{Binding ContractLastname}" Width="*"/>
-                <DataGridTextColumn Header="Teléfono" Binding="{Binding Phone}" Width="*"/>
-                <DataGridTextColumn Header="Ciudad" Binding="{Binding City}" Width="*"/>
+                <DataGridTextColumn Header="Company" Binding="{Binding CompanyName}" Width="*"/>
+                <DataGridTextColumn Header="Contact" Binding="{Binding ContractName}" Width="*"/>
+                <DataGridTextColumn Header="Lastname contact" Binding="{Binding ContractLastname}" Width="*"/>
+                <DataGridTextColumn Header="Position contact" Binding="{Binding ContractPosition}" Width="*"/>
+                <DataGridTextColumn Header="Phone number" Binding="{Binding Phone}" Width="*"/>
+                <DataGridTextColumn Header="Fax" Binding="{Binding FaxNumber}" Width="*"/>
+                <DataGridTextColumn Header="Address" Binding="{Binding Address}" Width="*"/>
+                <DataGridTextColumn Header="City" Binding="{Binding City}" Width="*"/>
+                <DataGridTextColumn Header="Province" Binding="{Binding Province}" Width="*"/>
+                <DataGridTextColumn Header="Zip code" Binding="{Binding ZipCode}" Width="*"/>
+                <DataGridTextColumn Header="Country" Binding="{Binding Country}" Width="*"/>
             </DataGrid.Columns>
+
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <Setter Property="BorderThickness" Value="0"/>
+                    <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="DataGridCell">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter Margin="8,5" 
+                                                    VerticalAlignment="Center"
+                                                    HorizontalAlignment="Left"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </DataGrid.CellStyle>
+
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Background" Value="#082c54"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="FontWeight" Value="SemiBold"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                    <Setter Property="Padding" Value="8,5"/>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
         </DataGrid>
     </Grid>
 </UserControl>

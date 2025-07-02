@@ -10,63 +10,63 @@
 
     <ScrollViewer>
         <StackPanel Margin="20">
-            <TextBlock Text="Crear Nueva Orden" FontSize="20" FontWeight="Bold" Margin="0,0,0,20" />
+            <TextBlock Text="Create new order" FontSize="20" FontWeight="Bold" Margin="0,0,0,20" />
 
             <!-- Datos de la Orden -->
             <StackPanel Orientation="Horizontal" Margin="0,5">
-                <TextBlock Text="Cliente ID:" Width="100" VerticalAlignment="Center"/>
+                <TextBlock Text="Client ID:" Width="100" VerticalAlignment="Center"/>
                 <TextBox Text="{Binding NewOrder.ClientId, UpdateSourceTrigger=PropertyChanged}" Width="200"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,5">
-                <TextBlock Text="Empleado ID:" Width="100" VerticalAlignment="Center"/>
+                <TextBlock Text="Employee ID:" Width="100" VerticalAlignment="Center"/>
                 <TextBox Text="{Binding NewOrder.EmployeeId, UpdateSourceTrigger=PropertyChanged}" Width="200"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,5">
-                <TextBlock Text="Dirección:" Width="100" VerticalAlignment="Center"/>
+                <TextBlock Text="Address:" Width="100" VerticalAlignment="Center"/>
                 <TextBox Text="{Binding NewOrder.AddressTrip, UpdateSourceTrigger=PropertyChanged}" Width="200"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,5">
-                <TextBlock Text="Provincia:" Width="100" VerticalAlignment="Center"/>
+                <TextBlock Text="Province:" Width="100" VerticalAlignment="Center"/>
                 <TextBox Text="{Binding NewOrder.ProvinceTrip, UpdateSourceTrigger=PropertyChanged}" Width="200"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,5">
-                <TextBlock Text="País:" Width="100" VerticalAlignment="Center"/>
+                <TextBlock Text="Country:" Width="100" VerticalAlignment="Center"/>
                 <TextBox Text="{Binding NewOrder.CountryTrip, UpdateSourceTrigger=PropertyChanged}" Width="200"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,5">
-                <TextBlock Text="Teléfono:" Width="100" VerticalAlignment="Center"/>
+                <TextBlock Text="Phone number:" Width="100" VerticalAlignment="Center"/>
                 <TextBox Text="{Binding NewOrder.PhoneTrip, UpdateSourceTrigger=PropertyChanged}" Width="200"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,5">
-                <TextBlock Text="Fecha Orden:" Width="100" VerticalAlignment="Center"/>
+                <TextBlock Text="Order detail:" Width="100" VerticalAlignment="Center"/>
                 <DatePicker SelectedDate="{Binding NewOrder.OrderDate, UpdateSourceTrigger=PropertyChanged}" Width="200"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,5">
-                <TextBlock Text="Fecha Viaje:" Width="100" VerticalAlignment="Center"/>
+                <TextBlock Text="Tavel date:" Width="100" VerticalAlignment="Center"/>
                 <DatePicker SelectedDate="{Binding NewOrder.DateTrip, UpdateSourceTrigger=PropertyChanged}" Width="200"/>
             </StackPanel>
 
             <!-- Detalles -->
-            <TextBlock Text="Detalles del Pedido" FontWeight="Bold" Margin="0,20,0,10" />
+            <TextBlock Text="Order detail" FontWeight="Bold" Margin="0,20,0,10" />
 
             <DataGrid ItemsSource="{Binding NewOrder.Details}" AutoGenerateColumns="False" CanUserAddRows="True" Height="200">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Producto ID" Binding="{Binding ProductDetailId, UpdateSourceTrigger=PropertyChanged}"/>
-                    <DataGridTextColumn Header="Cantidad" Binding="{Binding Amount, UpdateSourceTrigger=PropertyChanged}"/>
+                    <DataGridTextColumn Header="Product ID" Binding="{Binding ProductDetailId, UpdateSourceTrigger=PropertyChanged}"/>
+                    <DataGridTextColumn Header="Amount" Binding="{Binding Amount, UpdateSourceTrigger=PropertyChanged}"/>
                 </DataGrid.Columns>
             </DataGrid>
 
             <!-- Botones -->
             <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
-                <Button Content="Guardar" Click="GuardarOrden_Click" Width="100" Margin="5"/>
-                <Button Content="Cancelar" Command="{Binding BackToListCommand}" Width="100" Margin="5"/>
+                <Button Content="Save" Click="GuardarOrden_Click" Width="100" Margin="5"/>
+                <Button Content="Cancel" Command="{Binding BackToListCommand}" Width="100" Margin="5"/>
             </StackPanel>
         </StackPanel>
     </ScrollViewer>

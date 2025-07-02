@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\micha\OneDrive\Escritorio\Proy lenguajes 2\Proyecto2-Lenguajes-Frontend\MercatikaApp\obj\Debug\net8.0-windows\
+C:\Users\beth_\Videos\Proyecto2_Lenguajes_frontend\MercatikaApp\obj\Debug\net8.0-windows\
 MercatikaApp
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-C:\Users\micha\OneDrive\Escritorio\Proy lenguajes 2\Proyecto2-Lenguajes-Frontend\MercatikaApp\App.xaml
-13-804296507
+C:\Users\beth_\Videos\Proyecto2_Lenguajes_frontend\MercatikaApp\App.xaml
+14752351509
 11413424753
-43-713648737
-210710892267
-LoginWindow.xaml;MainWindow.xaml;Views\ClientEditWindow.xaml;Views\ClientsUcView.xaml;Views\InsertProductDetailView.xaml;Views\OrdersCreateView.xaml;Views\OrdersListView.xaml;Views\OrdersUcView.xaml;Views\PaymentListView.xaml;Views\PaymentMethodDialog.xaml;Views\ProductInsertView.xaml;Views\ProductView.xaml;Views\ReportsUcView.xaml;
+49323796294
+210-2112148239
+LoginWindow.xaml;MainWindow.xaml;Views\ClientEditWindow.xaml;Views\ClientsUcView.xaml;Views\CompanyEditWindow.xaml;Views\CompanyView.xaml;Views\InsertProductDetailView.xaml;Views\OrdersCreateView.xaml;Views\OrdersListView.xaml;Views\PaymentListView.xaml;Views\PaymentMethodDialog.xaml;Views\ProductInsertView.xaml;Views\ProductView.xaml;Views\ReportsUcView.xaml;
 
 False
 

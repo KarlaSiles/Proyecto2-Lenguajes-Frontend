@@ -1,7 +1,7 @@
 ﻿<Window x:Class="MercatikaApp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Mercatika" Height="450" Width="800"
+        Title="Mercatika" Height="600" Width="1000"
         WindowStartupLocation="CenterScreen"
         Background="White">
 
@@ -98,17 +98,15 @@
                     <MenuItem Header="Nuevo pedido" Style="{StaticResource SubMenuItem}"/>
                     <MenuItem Header="Historial" Style="{StaticResource SubMenuItem}"/>
                     <MenuItem Header="Pendientes" Style="{StaticResource SubMenuItem}" Click="Pagos_Click"/>
-                    <Separator/>
-                    <MenuItem Header="Estadísticas" Style="{StaticResource SubMenuItem}"/>
                 </MenuItem>
 
                 <MenuItem Header="Products" Style="{StaticResource MainMenuItem}">
-                    <MenuItem Header="Abrir Gestión de Productos" Click="AbrirProducto_Click"/>
-                    <MenuItem Header="Abrir Gestión de Detalles" Click="BtnInsertDetail_Click"/>
+                    <MenuItem Header="Open Product management" Click="AbrirProducto_Click"/>
+                    <MenuItem Header="Open Detail management" Click="BtnInsertDetail_Click"/>
                 </MenuItem>
 
                 <MenuItem Header="Clients" Style="{StaticResource MainMenuItem}">
-                    <MenuItem Header="Customer management" Style="{StaticResource SubMenuItem}" Click="CustomerManagement_Click"/>/>
+                    <MenuItem Header="Customer management" Style="{StaticResource SubMenuItem}" Click="CustomerManagement_Click"/>
                 </MenuItem>
 
                 <MenuItem Header="Reportes" Style="{StaticResource MainMenuItem}">
@@ -117,6 +115,10 @@
                     <MenuItem Header="Personalizados" Style="{StaticResource SubMenuItem}"/>
                     <Separator/>
                     <MenuItem Header="Exportar datos" Style="{StaticResource SubMenuItem}"/>
+                </MenuItem>
+
+                <MenuItem Header="Company Information" Style="{StaticResource MainMenuItem}">
+                    <MenuItem Header="About" Style="{StaticResource SubMenuItem}" Click="AboutCompany"/>
                 </MenuItem>
             </Menu>
 
@@ -130,5 +132,3 @@
         </Grid>
     </DockPanel>
 </Window>
-
-

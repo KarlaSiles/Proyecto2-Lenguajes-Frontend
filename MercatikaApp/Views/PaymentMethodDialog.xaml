@@ -1,15 +1,15 @@
 ﻿<Window x:Class="MercatikaApp.Views.PaymentMethodDialog"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Seleccionar método de pago" 
+        Title="Payment method" 
         WindowStartupLocation="CenterOwner" 
         SizeToContent="WidthAndHeight" 
         ResizeMode="NoResize">
     <StackPanel Margin="20">
-        <TextBlock Text="Seleccione el método de pago:" Margin="0,0,0,10" FontSize="16" TextAlignment="Center"/>
+        <TextBlock Text="Select the payment method:" Margin="0,0,0,10" FontSize="16" TextAlignment="Center"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Content="Efectivo" Width="100" Margin="5" Click="Efectivo_Click"/>
-            <Button Content="Tarjeta" Width="100" Margin="5" Click="Tarjeta_Click"/>
+            <Button Content="Cash" Width="100" Margin="5" Click="Efectivo_Click"/>
+            <Button Content="Card" Width="100" Margin="5" Click="Tarjeta_Click"/>
         </StackPanel>
     </StackPanel>
 </Window>

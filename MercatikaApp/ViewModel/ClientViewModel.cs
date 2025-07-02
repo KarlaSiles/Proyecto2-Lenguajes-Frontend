@@ -51,7 +51,7 @@ namespace MercatikaApp.ViewModel
             set { _isSearching = value; OnPropertyChanged(); }
         }
 
-        // Comandos
+
         public ICommand LoadClientsCommand => new AsyncRelayCommand(LoadClientsAsync);
         public ICommand SearchCommand => new AsyncRelayCommand(SearchClientsAsync);
         public ICommand DeleteClientCommand => new AsyncRelayCommand(DeleteClientAsync);
@@ -81,7 +81,7 @@ namespace MercatikaApp.ViewModel
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al cargar clientes: {ex.Message}", "Error",
+                MessageBox.Show($"Error loading clients: {ex.Message}", "Error",
                               MessageBoxButton.OK, MessageBoxImage.Error);
             }
             finally
@@ -105,14 +105,14 @@ namespace MercatikaApp.ViewModel
 
                 List<Client> results = new List<Client>();
 
-                // Búsqueda por ID si el término es numérico
+              
                 if (int.TryParse(SearchTerm, out int id))
                 {
                     var client = await _clientService.GetClientById(id);
                     if (client != null) results.Add(client);
                 }
 
-                // Búsquedas por texto en paralelo
+          
                 var companyTask = _clientService.GetClientsByCompanyName(SearchTerm);
                 var nameTask = _clientService.GetClientsByName(SearchTerm);
                 var lastnameTask = _clientService.GetClientsByLastname(SearchTerm);
@@ -123,7 +123,7 @@ namespace MercatikaApp.ViewModel
                 results.AddRange(nameTask.Result);
                 results.AddRange(lastnameTask.Result);
 
-                // Eliminar duplicados y ordenar
+           
                 var distinctResults = results
                     .DistinctBy(c => c.ClientId)
                     .OrderBy(c => c.CompanyName);
@@ -135,13 +135,13 @@ namespace MercatikaApp.ViewModel
 
                 if (FilteredClients.Count == 0)
                 {
-                    MessageBox.Show("No se encontraron resultados", "Búsqueda",
+                    MessageBox.Show("No results found", "Búsqueda",
                                   MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al buscar: {ex.Message}", "Error",
+                MessageBox.Show($"Search error: {ex.Message}", "Error",
                               MessageBoxButton.OK, MessageBoxImage.Error);
             }
             finally
@@ -162,8 +162,8 @@ namespace MercatikaApp.ViewModel
 
             try
             {
-                var confirm = MessageBox.Show($"¿Eliminar al cliente {SelectedClient.CompanyName}?",
-                                            "Confirmar",
+                var confirm = MessageBox.Show($"¿Delete the client {SelectedClient.CompanyName}?",
+                                            "Confirm",
                                             MessageBoxButton.YesNo,
                                             MessageBoxImage.Question);
 
@@ -173,7 +173,7 @@ namespace MercatikaApp.ViewModel
 
                 if (success)
                 {
-                    MessageBox.Show("Cliente eliminado correctamente", "Éxito",
+                    MessageBox.Show("Successfully deleted client", "Éxito",
                                   MessageBoxButton.OK, MessageBoxImage.Information);
                     _allClients.Remove(SelectedClient);
                     FilteredClients.Remove(SelectedClient);
@@ -181,13 +181,13 @@ namespace MercatikaApp.ViewModel
                 }
                 else
                 {
-                    MessageBox.Show("No se pudo eliminar el cliente", "Error",
+                    MessageBox.Show("The client could not be deleted", "Error",
                                   MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al eliminar: {ex.Message}", "Error",
+                MessageBox.Show($"Delete error: {ex.Message}", "Error",
                               MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
@@ -205,7 +205,7 @@ namespace MercatikaApp.ViewModel
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al abrir ventana: {ex.Message}", "Error",
+                MessageBox.Show($"Error opening window: {ex.Message}", "Error",
                               MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }

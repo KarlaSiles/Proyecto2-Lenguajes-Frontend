@@ -824,23 +824,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\micha\\.nuget\\packages\\": {},
+    "C:\\Users\\beth_\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\micha\\OneDrive\\Escritorio\\Proy lenguajes 2\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\MercatikaApp.csproj",
+      "projectUniqueName": "C:\\Users\\beth_\\Videos\\Proyecto2_Lenguajes_frontend\\MercatikaApp\\MercatikaApp.csproj",
       "projectName": "MercatikaApp",
-      "projectPath": "C:\\Users\\micha\\OneDrive\\Escritorio\\Proy lenguajes 2\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\MercatikaApp.csproj",
-      "packagesPath": "C:\\Users\\micha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\micha\\OneDrive\\Escritorio\\Proy lenguajes 2\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\obj\\",
+      "projectPath": "C:\\Users\\beth_\\Videos\\Proyecto2_Lenguajes_frontend\\MercatikaApp\\MercatikaApp.csproj",
+      "packagesPath": "C:\\Users\\beth_\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\beth_\\Videos\\Proyecto2_Lenguajes_frontend\\MercatikaApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\micha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\beth_\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -849,6 +849,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -909,6 +910,28 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.16, 8.0.16]"
+          },
+          {
+            "name": "Microsoft.Net.Sdk.Compilers.Toolset",
+            "version": "[9.0.300, 9.0.300]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[8.0.16, 8.0.16]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.16, 8.0.16]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[8.0.16, 8.0.16]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"

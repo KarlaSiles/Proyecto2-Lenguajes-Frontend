@@ -24,7 +24,7 @@ namespace MercatikaApp.Views
         public ClientsUcView()
         {
             InitializeComponent();
-            DataContext = new ClientViewModel(); 
+            DataContext = new ClientViewModel();
             Loaded += async (s, e) => await LoadData();
         }
         private async Task LoadData()

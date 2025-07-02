@@ -10,19 +10,21 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MercatikaApp.Models;
+using MercatikaApp.ViewModel;
 
 namespace MercatikaApp.Views
 {
     /// <summary>
-    /// Lógica de interacción para OrdersUcView.xaml
+    /// Lógica de interacción para CompanyEditWindow.xaml
     /// </summary>
-    public partial class OrdersUcView : UserControl
+    public partial class CompanyEditWindow : Window
     {
-        public OrdersUcView()
+        public CompanyEditWindow(Company company)
         {
             InitializeComponent();
+            DataContext = new CompanyEditViewModel(company);
         }
     }
 }

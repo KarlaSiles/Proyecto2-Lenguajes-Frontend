@@ -13,7 +13,7 @@ namespace MercatikaApp.ViewModel
         private readonly ClientApiService _clientService = new ClientApiService();
         private Client _currentClient;
 
-        public string Title => CurrentClient.ClientId == 0 ? "Agregar Nuevo Cliente" : $"Editar Cliente: {CurrentClient.CompanyName}";
+        public string Title => CurrentClient.ClientId == 0 ? "Add New Client" : $"Edit Client: {CurrentClient.CompanyName}";
 
         public Client CurrentClient
         {
@@ -52,7 +52,7 @@ namespace MercatikaApp.ViewModel
                 if (CurrentClient.ClientId == 0)
                 {
                     int newId = await _clientService.CreateClient(CurrentClient);
-                    MessageBox.Show($"Cliente creado exitosamente con ID: {newId}", "Éxito",
+                    MessageBox.Show($"Client successfully created with ID: {newId}", "Éxito",
                                   MessageBoxButton.OK, MessageBoxImage.Information);
                     CloseWindow(true);
                 }
@@ -61,20 +61,20 @@ namespace MercatikaApp.ViewModel
                     bool success = await _clientService.UpdateClient(CurrentClient);
                     if (success)
                     {
-                        MessageBox.Show("Cliente actualizado exitosamente", "Éxito",
+                        MessageBox.Show("Client successfully updated", "Éxito",
                                       MessageBoxButton.OK, MessageBoxImage.Information);
                         CloseWindow(true);
                     }
                     else
                     {
-                        MessageBox.Show("No se pudo actualizar el cliente", "Error",
+                        MessageBox.Show("The client could not be updated.", "Error",
                                       MessageBoxButton.OK, MessageBoxImage.Error);
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al guardar: {ex.Message}", "Error",
+                MessageBox.Show($"Error saving: {ex.Message}", "Error",
                               MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }

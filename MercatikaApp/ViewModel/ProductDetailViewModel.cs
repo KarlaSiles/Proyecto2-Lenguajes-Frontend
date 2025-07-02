@@ -90,24 +90,24 @@ namespace MercatikaApp.ViewModel
             {
                 if (SelectedProduct == null || SelectedProduct.ProductId <= 0)
                 {
-                    MessageBox.Show("Seleccione un producto primero.");
+                    MessageBox.Show("Please select a product first.");
                     return;
                 }
 
                 var success = await _productService.CreateProductDetailAsync(SelectedProduct.ProductId, ProductDetail);
-                MessageBox.Show(success ? "Detalle insertado correctamente" : "Error al insertar el detalle");
+                MessageBox.Show(success ? "Detail inserted correctly" : "Error inserting detail");
             }
 
             private async Task UpdateDetailAsync()
             {
                 if (SelectedProduct == null || SelectedProduct.ProductId <= 0)
                 {
-                    MessageBox.Show("Seleccione un producto primero.");
+                    MessageBox.Show("Please select a product first.");
                     return;
                 }
 
                 var success = await _productService.UpdateProductDetailAsync(SelectedProduct.ProductId, ProductDetail);
-                MessageBox.Show(success ? "Detalle actualizado correctamente" : "Error al actualizar el detalle");
+                MessageBox.Show(success ? "Detail updated successfully" : "Error updating details");
             }
 
             public event PropertyChangedEventHandler? PropertyChanged;

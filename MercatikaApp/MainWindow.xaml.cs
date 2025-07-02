@@ -38,7 +38,7 @@ namespace MercatikaApp
             var nuevaVista = new OrdersCreateView();
             if (nuevaVista.DataContext is OrderViewModel vm)
             {
-                vm.NewOrderCommand.Execute(null); // activa el modo creación
+                vm.NewOrderCommand.Execute(null);
             }
 
             MainContentFrame.Content = nuevaVista;
@@ -56,7 +56,7 @@ namespace MercatikaApp
             var historialVista = new OrdersListView();
             if (historialVista.DataContext is OrderViewModel vm)
             {
-                vm.BackToListCommand.Execute(null); // activa el modo lista
+                vm.BackToListCommand.Execute(null);
             }
 
             MainContentFrame.Content = historialVista;
@@ -64,19 +64,28 @@ namespace MercatikaApp
 
         private void CustomerManagement_Click(object sender, RoutedEventArgs e)
         {
-            // Limpia la navegación anterior (opcional)
+
             MainContentFrame.NavigationService?.RemoveBackEntry();
 
-            // Navega a la vista de gestión de clientes
+
             MainContentFrame.Navigate(new ClientsUcView());
         }
-    
+
+        private void AboutCompany(object sender, RoutedEventArgs e)
+        {
+
+            MainContentFrame.NavigationService?.RemoveBackEntry();
+
+
+            MainContentFrame.Navigate(new CompanyView());
+        }
+
         private void LogOut_Click(object sender, RoutedEventArgs e)
         {
             var login = new LoginWindow();
             login.Show();
 
-            this.Close();// Cerrar este MainWindow
+            this.Close();
         }
     }
 }

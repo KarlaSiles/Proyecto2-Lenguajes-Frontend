@@ -103,7 +103,7 @@ namespace MercatikaApp.ViewModel
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error al cargar órdenes: " + ex.Message);
+                Console.WriteLine("Error loading orders: " + ex.Message);
             }
             finally
             {
@@ -122,18 +122,18 @@ namespace MercatikaApp.ViewModel
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error al cargar detalles: " + ex.Message);
+                Console.WriteLine("Error loading details: " + ex.Message);
             }
         }
 
         public async Task<bool> CreateOrderAsync()
         {
-            // Validaciones previas
+
             if (NewOrder.ClientId <= 0 || NewOrder.EmployeeId <= 0 ||
                 string.IsNullOrWhiteSpace(NewOrder.AddressTrip) ||
                 NewOrder.Details == null || NewOrder.Details.Count == 0)
             {
-                MessageBox.Show("Completa todos los campos obligatorios y añade al menos un detalle.", "Validación", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Complete all required fields and add at least one detail.", "Validación", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return false;
             }
 
@@ -141,7 +141,7 @@ namespace MercatikaApp.ViewModel
             {
                 if (detail.ProductDetailId <= 0 || detail.Amount <= 0)
                 {
-                    MessageBox.Show("Todos los detalles deben tener producto y cantidad válida.", "Validación", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("All details must have valid product and quantity.", "Validación", MessageBoxButton.OK, MessageBoxImage.Warning);
                     return false;
                 }
             }
@@ -158,7 +158,7 @@ namespace MercatikaApp.ViewModel
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error creando orden: " + ex.Message);
+                MessageBox.Show("Error creating order: " + ex.Message);
             }
 
             return false;

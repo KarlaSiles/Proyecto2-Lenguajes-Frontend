@@ -5,8 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="{Binding Title}" 
-        Height="600" Width="800"
-        WindowStartupLocation="CenterOwner">
+        Height="650" Width="850"
+        WindowStartupLocation="CenterOwner"
+        Background="#FFF5F5F5">
+
+    <Window.Resources>
+        <!-- Estilos para los botones -->
+        <Style x:Key="OrangeButton" TargetType="Button">
+            <Setter Property="Background" Value="#FFA75A"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="10 5"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF8C42"/>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" Value="#CCCCCC"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Estilo para los TextBox -->
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#DDDDDD"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+
+        <!-- Estilo para los Labels -->
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="0 5"/>
+            <Setter Property="Foreground" Value="#333333"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+        </Style>
+    </Window.Resources>
+
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -14,66 +54,80 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Text="{Binding Title}" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+        <!-- Encabezado con degradado azul -->
+        <Border Grid.Row="0" Background="#3498DB" CornerRadius="4" Padding="10" Margin="0,0,0,15">
+            <TextBlock Text="{Binding Title}" 
+                      FontSize="18" 
+                      FontWeight="Bold" 
+                      Foreground="White"
+                      HorizontalAlignment="Center"/>
+        </Border>
 
-        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
+        <!-- Contenido principal con tarjeta blanca -->
+        <Border Grid.Row="1" Background="White" CornerRadius="4" Padding="15" 
+                BorderBrush="#E0E0E0" BorderThickness="1">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*" MinWidth="200"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*" MinWidth="200"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
 
-                <!-- Columna 1 -->
-                <Label Grid.Row="0" Grid.Column="0" Content="Nombre Empresa:"/>
-                <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding CurrentClient.CompanyName}" Margin="5"/>
+                    <!-- Columna 1 -->
+                    <Label Grid.Row="0" Grid.Column="0" Content="Company name:"/>
+                    <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding CurrentClient.CompanyName}"/>
 
-                <Label Grid.Row="1" Grid.Column="0" Content="Nombre Contacto:"/>
-                <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding CurrentClient.ContractName}" Margin="5"/>
+                    <Label Grid.Row="1" Grid.Column="0" Content="Name contact:"/>
+                    <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding CurrentClient.ContractName}"/>
 
-                <Label Grid.Row="2" Grid.Column="0" Content="Apellido Contacto:"/>
-                <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding CurrentClient.ContractLastname}" Margin="5"/>
+                    <Label Grid.Row="2" Grid.Column="0" Content="Lastname contact:"/>
+                    <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding CurrentClient.ContractLastname}"/>
 
-                <Label Grid.Row="3" Grid.Column="0" Content="Cargo Contacto:"/>
-                <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding CurrentClient.ContractPosition}" Margin="5"/>
+                    <Label Grid.Row="3" Grid.Column="0" Content="Position contact:"/>
+                    <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding CurrentClient.ContractPosition}"/>
 
-                <Label Grid.Row="4" Grid.Column="0" Content="Dirección:"/>
-                <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding CurrentClient.Address}" Margin="5"/>
+                    <Label Grid.Row="4" Grid.Column="0" Content="Address:"/>
+                    <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding CurrentClient.Address}"/>
 
-                <!-- Columna 2 -->
-                <Label Grid.Row="0" Grid.Column="2" Content="Ciudad:"/>
-                <TextBox Grid.Row="0" Grid.Column="3" Text="{Binding CurrentClient.City}" Margin="5"/>
+                    <!-- Columna 2 -->
+                    <Label Grid.Row="0" Grid.Column="3" Content="City:"/>
+                    <TextBox Grid.Row="0" Grid.Column="4" Text="{Binding CurrentClient.City}"/>
 
-                <Label Grid.Row="1" Grid.Column="2" Content="Provincia:"/>
-                <TextBox Grid.Row="1" Grid.Column="3" Text="{Binding CurrentClient.Province}" Margin="5"/>
+                    <Label Grid.Row="1" Grid.Column="3" Content="Province:"/>
+                    <TextBox Grid.Row="1" Grid.Column="4" Text="{Binding CurrentClient.Province}"/>
 
-                <Label Grid.Row="2" Grid.Column="2" Content="Código Postal:"/>
-                <TextBox Grid.Row="2" Grid.Column="3" Text="{Binding CurrentClient.ZipCode}" Margin="5"/>
+                    <Label Grid.Row="2" Grid.Column="3" Content="Zip code:"/>
+                    <TextBox Grid.Row="2" Grid.Column="4" Text="{Binding CurrentClient.ZipCode}"/>
 
-                <Label Grid.Row="3" Grid.Column="2" Content="País:"/>
-                <TextBox Grid.Row="3" Grid.Column="3" Text="{Binding CurrentClient.Country}" Margin="5"/>
+                    <Label Grid.Row="3" Grid.Column="3" Content="Country:"/>
+                    <TextBox Grid.Row="3" Grid.Column="4" Text="{Binding CurrentClient.Country}"/>
 
-                <Label Grid.Row="4" Grid.Column="2" Content="Teléfono:"/>
-                <TextBox Grid.Row="4" Grid.Column="3" Text="{Binding CurrentClient.Phone}" Margin="5"/>
+                    <Label Grid.Row="4" Grid.Column="3" Content="Phone number:"/>
+                    <TextBox Grid.Row="4" Grid.Column="4" Text="{Binding CurrentClient.Phone}"/>
 
-                <Label Grid.Row="5" Grid.Column="2" Content="Fax:"/>
-                <TextBox Grid.Row="5" Grid.Column="3" Text="{Binding CurrentClient.FaxNumber}" Margin="5"/>
-            </Grid>
-        </ScrollViewer>
+                    <Label Grid.Row="5" Grid.Column="3" Content="Fax:"/>
+                    <TextBox Grid.Row="5" Grid.Column="4" Text="{Binding CurrentClient.FaxNumber}"/>
+                </Grid>
+            </ScrollViewer>
+        </Border>
 
-        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Content="Guardar" Width="100" Margin="5" Command="{Binding SaveCommand}"/>
-            <Button Content="Cancelar" Width="100" Margin="5" IsCancel="True"/>
+        <!-- Barra de botones -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,15,0,0">
+            <Button Content="Save" Width="120" Style="{StaticResource OrangeButton}" 
+                    Command="{Binding SaveCommand}"/>
+            <Button Content="Cancel" Width="120" Background="#E0E0E0" Foreground="#333333"
+                    BorderThickness="0" Margin="5" Padding="10 5" IsCancel="True"/>
         </StackPanel>
     </Grid>
 </Window>

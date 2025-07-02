@@ -1,0 +1,156 @@
+﻿<UserControl x:Class="MercatikaApp.Views.CompanyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="800"
+             FontFamily="Segoe UI">
+
+    <UserControl.Resources>
+        <!-- Estilo para el botón -->
+        <Style x:Key="PrimaryButton" TargetType="Button">
+            <Setter Property="Background" Value="#FFA75A"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="12 5"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect BlurRadius="4" ShadowDepth="2" Opacity="0.2"/>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF8C42"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Estilo para los TextBlocks de datos -->
+        <Style x:Key="DataTextStyle" TargetType="TextBlock">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="8 5"/>
+            <Setter Property="Background" Value="#FAFAFA"/>
+            <Setter Property="Foreground" Value="#333333"/>
+        </Style>
+
+        <!-- Estilo para los TextBlocks de etiqueta -->
+        <Style x:Key="LabelTextStyle" TargetType="TextBlock">
+            <Setter Property="Margin" Value="5 5 5 2"/>
+            <Setter Property="Foreground" Value="#3498DB"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Background="#FFF5F5F5" Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Encabezado -->
+        <Border Grid.Row="0" Background="#3498DB" CornerRadius="4" Padding="15" Margin="0,0,0,15">
+            <TextBlock Text="Company Information" 
+                      FontSize="18" 
+                      FontWeight="Bold" 
+                      Foreground="White"
+                      HorizontalAlignment="Center"/>
+        </Border>
+
+        <!-- Contenido en tarjeta blanca con sombra -->
+        <Border Grid.Row="1" Background="White" CornerRadius="4" Padding="15"
+                BorderBrush="#E0E0E0" BorderThickness="1">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*" MinWidth="200"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*" MinWidth="200"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Columna 1 -->
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Name:" Style="{StaticResource LabelTextStyle}"/>
+                    <Border Grid.Row="0" Grid.Column="1" Background="#FAFAFA" CornerRadius="2">
+                        <TextBlock Text="{Binding Company.Name_company}" Style="{StaticResource DataTextStyle}"/>
+                    </Border>
+
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Address:" Style="{StaticResource LabelTextStyle}"/>
+                    <Border Grid.Row="1" Grid.Column="1" Background="#FAFAFA" CornerRadius="2">
+                        <TextBlock Text="{Binding Company.Address_company}" Style="{StaticResource DataTextStyle}"/>
+                    </Border>
+
+                    <TextBlock Grid.Row="2" Grid.Column="0" Text="City:" Style="{StaticResource LabelTextStyle}"/>
+                    <Border Grid.Row="2" Grid.Column="1" Background="#FAFAFA" CornerRadius="2">
+                        <TextBlock Text="{Binding Company.City_company}" Style="{StaticResource DataTextStyle}"/>
+                    </Border>
+
+                    <TextBlock Grid.Row="3" Grid.Column="0" Text="Province:" Style="{StaticResource LabelTextStyle}"/>
+                    <Border Grid.Row="3" Grid.Column="1" Background="#FAFAFA" CornerRadius="2">
+                        <TextBlock Text="{Binding Company.State_or_province}" Style="{StaticResource DataTextStyle}"/>
+                    </Border>
+
+                    <TextBlock Grid.Row="4" Grid.Column="0" Text="Zip code:" Style="{StaticResource LabelTextStyle}"/>
+                    <Border Grid.Row="4" Grid.Column="1" Background="#FAFAFA" CornerRadius="2">
+                        <TextBlock Text="{Binding Company.Zip_code_company}" Style="{StaticResource DataTextStyle}"/>
+                    </Border>
+
+                    <!-- Columna 2 -->
+                    <TextBlock Grid.Row="0" Grid.Column="3" Text="Country:" Style="{StaticResource LabelTextStyle}"/>
+                    <Border Grid.Row="0" Grid.Column="4" Background="#FAFAFA" CornerRadius="2">
+                        <TextBlock Text="{Binding Company.Country_company}" Style="{StaticResource DataTextStyle}"/>
+                    </Border>
+
+                    <TextBlock Grid.Row="1" Grid.Column="3" Text="Phone Number:" Style="{StaticResource LabelTextStyle}"/>
+                    <Border Grid.Row="1" Grid.Column="4" Background="#FAFAFA" CornerRadius="2">
+                        <TextBlock Text="{Binding Company.Phone_company}" Style="{StaticResource DataTextStyle}"/>
+                    </Border>
+
+                    <TextBlock Grid.Row="2" Grid.Column="3" Text="Fax:" Style="{StaticResource LabelTextStyle}"/>
+                    <Border Grid.Row="2" Grid.Column="4" Background="#FAFAFA" CornerRadius="2">
+                        <TextBlock Text="{Binding Company.Fax_number_company}" Style="{StaticResource DataTextStyle}"/>
+                    </Border>
+
+                    <TextBlock Grid.Row="3" Grid.Column="3" Text="Tax:" Style="{StaticResource LabelTextStyle}"/>
+                    <Border Grid.Row="3" Grid.Column="4" Background="#FAFAFA" CornerRadius="2">
+                        <TextBlock Text="{Binding Company.Sale_tax}" Style="{StaticResource DataTextStyle}"/>
+                    </Border>
+
+                    <TextBlock Grid.Row="4" Grid.Column="3" Text="Payments terms:" Style="{StaticResource LabelTextStyle}"/>
+                    <Border Grid.Row="4" Grid.Column="4" Background="#FAFAFA" CornerRadius="2">
+                        <TextBlock Text="{Binding Company.Payments_terms}" Style="{StaticResource DataTextStyle}"/>
+                    </Border>
+
+                    <!-- Mensaje -->
+                    <TextBlock Grid.Row="5" Grid.Column="0" Text="Message:" Style="{StaticResource LabelTextStyle}"/>
+                    <Border Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="5" 
+                            Background="#FAFAFA" CornerRadius="2" Padding="8">
+                        <TextBlock Text="{Binding Company.Message}" 
+                                  TextWrapping="Wrap"
+                                  Style="{StaticResource DataTextStyle}"/>
+                    </Border>
+                </Grid>
+            </ScrollViewer>
+        </Border>
+
+        <!-- Botón de edición -->
+        <Button Grid.Row="2" Content="Edit information" 
+                Style="{StaticResource PrimaryButton}"
+                HorizontalAlignment="Right" 
+                Margin="0,15,0,0"
+                Command="{Binding OpenEditWindowCommand}"/>
+    </Grid>
+</UserControl>

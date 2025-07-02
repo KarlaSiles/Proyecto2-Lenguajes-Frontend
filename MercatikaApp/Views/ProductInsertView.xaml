@@ -61,13 +61,13 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Margin="0 0 0 10">
-            <TextBlock Text="Nombre del Producto" Style="{StaticResource LabelStyle}"/>
+            <TextBlock Text="Product name" Style="{StaticResource LabelStyle}"/>
             <TextBox Text="{Binding SelectedProduct.ProductName, UpdateSourceTrigger=PropertyChanged}" />
 
-            <TextBlock Text="Precio" Style="{StaticResource LabelStyle}"/>
+            <TextBlock Text="Price" Style="{StaticResource LabelStyle}"/>
             <TextBox Text="{Binding SelectedProduct.Price, UpdateSourceTrigger=PropertyChanged}" />
 
-            <TextBlock Text="Categoría" Style="{StaticResource LabelStyle}"/>
+            <TextBlock Text="Category" Style="{StaticResource LabelStyle}"/>
             <ComboBox ItemsSource="{Binding Categories}"
                       DisplayMemberPath="Description"
                       SelectedItem="{Binding SelectedProduct.CategoryCode, Mode=TwoWay}"
@@ -75,7 +75,7 @@
         </StackPanel>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Content="Insertar"
+            <Button Content="Insert"
                     Width="100"
                     Style="{StaticResource OrangeButton}"
                     Command="{Binding AddCommand}" />

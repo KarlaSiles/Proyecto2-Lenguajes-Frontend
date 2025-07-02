@@ -11,7 +11,10 @@
     <Compile Update="Views\ClientsUcView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\OrdersUcView.xaml.cs">
+    <Compile Update="Views\CompanyEditWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\CompanyView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\PaymentListView.xaml.cs">
