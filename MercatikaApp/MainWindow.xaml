@@ -95,8 +95,8 @@
             <!-- Menú principal -->
             <Menu Background="White" Margin="10,0">
                 <MenuItem Header="Pedidos" Style="{StaticResource MainMenuItem}">
-                    <MenuItem Header="Nuevo pedido" Style="{StaticResource SubMenuItem}"/>
-                    <MenuItem Header="Historial" Style="{StaticResource SubMenuItem}"/>
+                    <MenuItem Header="Nuevo pedido" Style="{StaticResource SubMenuItem}" Click="NuevoPedido_Click"/>
+                    <MenuItem Header="Historial" Style="{StaticResource SubMenuItem}" Click="Historial_Click"/>
                     <MenuItem Header="Pendientes" Style="{StaticResource SubMenuItem}" Click="Pagos_Click"/>
                 </MenuItem>
 

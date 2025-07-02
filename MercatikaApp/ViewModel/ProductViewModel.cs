@@ -66,15 +66,25 @@ namespace MercatikaApp.ViewModel
             DeleteCommand = new RelayCommand(async () => await DeleteProductAsync(), CanExecuteProductAction);
             SearchCommand = new RelayCommand(async () => await SearchProductsAsync());
         }
+        private int _selectedQuantity = 1;
+        public int SelectedQuantity
+        {
+            get => _selectedQuantity;
+            set
+            {
+                _selectedQuantity = value;
+                OnPropertyChanged(); // Si implementas INotifyPropertyChanged
+            }
+        }
 
-        private async Task LoadProductsAsync()
+        public async Task LoadProductsAsync()
         {
             var products = await _productService.SearchProductsAsync(""); 
             Products.Clear();
             foreach (var product in products)
                 Products.Add(product);
 
-            await LoadCategoriesAsync(); 
+            await LoadCategoriesAsync(); // NUEVO: Cargar categorías al cargar productos
         }
 
         private async Task AddProductAsync()

@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Text.Json.Serialization;
 
 namespace MercatikaApp.Models
 {
@@ -9,6 +10,9 @@ namespace MercatikaApp.Models
         public int _productDetailId;
         public int _amount;
         public decimal _linePrice;
+        [JsonIgnore] // Esto evita que se envíe al backend
+        public string ProductName { get; set; }
+        public Product? Product { get; set; } // Esta propiedad permite recibir el objeto completo anidado
 
         public int OrderId
         {
