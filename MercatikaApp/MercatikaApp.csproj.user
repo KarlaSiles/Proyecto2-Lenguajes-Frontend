@@ -14,6 +14,12 @@
     <Compile Update="Views\OrdersUcView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\PaymentListView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\PaymentMethodDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\ReportsUcView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

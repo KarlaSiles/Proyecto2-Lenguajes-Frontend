@@ -97,7 +97,7 @@
                 <MenuItem Header="Pedidos" Style="{StaticResource MainMenuItem}">
                     <MenuItem Header="Nuevo pedido" Style="{StaticResource SubMenuItem}"/>
                     <MenuItem Header="Historial" Style="{StaticResource SubMenuItem}"/>
-                    <MenuItem Header="Pendientes" Style="{StaticResource SubMenuItem}"/>
+                    <MenuItem Header="Pendientes" Style="{StaticResource SubMenuItem}" Click="Pagos_Click"/>
                     <Separator/>
                     <MenuItem Header="Estadísticas" Style="{StaticResource SubMenuItem}"/>
                 </MenuItem>

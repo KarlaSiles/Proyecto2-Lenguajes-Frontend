@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="MercatikaApp.Views.PaymentsListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:MercatikaApp.ViewModel"
+             xmlns:local="clr-namespace:MercatikaApp.Converters"
+             Background="White">
+
+    <UserControl.DataContext>
+        <vm:PaymentViewModel />
+    </UserControl.DataContext>
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Filtros -->
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0 0 0 10">
+            <TextBlock Text="ID Orden:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+            <TextBox Width="80" Text="{Binding SearchId, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,10,0"/>
+
+            <TextBlock Text="Estado:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+            <TextBox Width="120" Text="{Binding SearchStatus, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,10,0"/>
+
+            <Button Content="Filtrar" Command="{Binding FilterCommand}" Width="80"/>
+            <Button Content="Recargar" Command="{Binding LoadPaymentsCommand}" Width="80" Margin="5,0,0,0"/>
+        </StackPanel>
+
+        <!-- Lista de pagos -->
+        <DataGrid Grid.Row="1"
+                  ItemsSource="{Binding Payments}"
+                  SelectedItem="{Binding SelectedPayment}"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  IsReadOnly="True"
+                  Margin="0,0,0,10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Pago ID" Binding="{Binding PaymentId}" Width="Auto"/>
+                <DataGridTextColumn Header="Orden ID" Binding="{Binding OrderId}" Width="Auto"/>
+                <DataGridTextColumn Header="Monto" Binding="{Binding PaymentAmount}" Width="Auto"/>
+                <DataGridTextColumn Header="Estado" Binding="{Binding Estado}" Width="Auto"/>
+                <DataGridTextColumn Header="Método" Binding="{Binding PaymentMethodName}" Width="Auto"/>
+                <DataGridTextColumn Header="Tarjeta" Binding="{Binding CreditCardNum}" Width="Auto"/>
+                <DataGridTextColumn Header="Fecha Pago" Binding="{Binding DatePayment}" Width="Auto"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Botón pagar -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left">
+            <Button Content="Pagar esta cuenta"
+                    Command="{Binding PaySelectedCommand}"
+                    Width="150"
+                    Height="35"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
