@@ -1,7 +1,10 @@
 ﻿using MercatikaApp.Models;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Text.Json;
+using System.Threading.Tasks;
+using System;
 using System.Windows;
 
 namespace MercatikaApp.Services
@@ -9,135 +12,77 @@ namespace MercatikaApp.Services
     public class ProductService
     {
         private readonly HttpClient _httpClient;
-        private const string BaseUrl = "https://localhost:7086/api/products";
-        private const string CategoriesUrl = "https://localhost:7086/api/Products/categories";
 
         public ProductService()
         {
-            _httpClient = new HttpClient();
+            _httpClient = new HttpClient
+            {
+                BaseAddress = new Uri(AppConfig.GetApiBaseUrl())
+            };
         }
-
 
         public async Task<List<Product>> SearchProductsAsync(string searchTerm)
         {
-            try
-            {
-                if (string.IsNullOrWhiteSpace(searchTerm))
-                    return await GetAllProductsAsync();
-
-                var url = $"{BaseUrl}?searchTerm={Uri.EscapeDataString(searchTerm)}";
-                var response = await _httpClient.GetFromJsonAsync<List<Product>>(url);
-                return response ?? new List<Product>();
-            }
-            catch (Exception ex)
-            {
-                throw new ApplicationException("Error al buscar productos.", ex);
-            }
+            var url = string.IsNullOrWhiteSpace(searchTerm) ? "api/products" : $"api/products?searchTerm={Uri.EscapeDataString(searchTerm)}";
+            var response = await _httpClient.GetFromJsonAsync<List<Product>>(url);
+            return response ?? new List<Product>();
         }
-
 
         public async Task<List<Product>> GetAllProductsAsync()
         {
-            try
-            {
-                var response = await _httpClient.GetFromJsonAsync<List<Product>>(BaseUrl);
-                return response ?? new List<Product>();
-            }
-            catch (Exception ex)
-            {
-                throw new ApplicationException("Error al obtener todos los productos.", ex);
-            }
+            var response = await _httpClient.GetFromJsonAsync<List<Product>>("api/products");
+            return response ?? new List<Product>();
         }
-
 
         public async Task<Product?> GetByIdAsync(int id)
         {
-            try
-            {
-                return await _httpClient.GetFromJsonAsync<Product>($"{BaseUrl}/{id}");
-            }
-            catch
-            {
-                return null;
-            }
+            return await _httpClient.GetFromJsonAsync<Product>($"api/products/{id}");
         }
-
 
         public async Task<bool> CreateProductAsync(Product product)
         {
-
-            var json = JsonSerializer.Serialize(product, new JsonSerializerOptions { WriteIndented = true });
-
-
-            
-
-
-            var response = await _httpClient.PostAsJsonAsync(BaseUrl, product);
-
-
+            var response = await _httpClient.PostAsJsonAsync("api/products", product);
             if (!response.IsSuccessStatusCode)
             {
                 var error = await response.Content.ReadAsStringAsync();
                 MessageBox.Show("Error al insertar producto:\n" + error, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-
             return response.IsSuccessStatusCode;
         }
-
-
-
 
         public async Task<bool> UpdateProductAsync(Product product)
         {
-            var response = await _httpClient.PutAsJsonAsync($"{BaseUrl}/{product.ProductId}", product);
+            var response = await _httpClient.PutAsJsonAsync($"api/products/{product.ProductId}", product);
             return response.IsSuccessStatusCode;
         }
-
 
         public async Task<bool> DeleteProductAsync(int id)
         {
-            var response = await _httpClient.DeleteAsync($"{BaseUrl}/{id}");
+            var response = await _httpClient.DeleteAsync($"api/products/{id}");
             return response.IsSuccessStatusCode;
         }
 
-
-        public async Task<bool> CreateProductDetailAsync(int productId, ProductDetail detail)
+        public async Task<List<Category>> GetAllCategoriesAsync()
         {
-            var response = await _httpClient.PostAsJsonAsync($"{BaseUrl}/{productId}/details", detail);
-            return response.IsSuccessStatusCode;
+            var response = await _httpClient.GetFromJsonAsync<List<Category>>("api/products/categories");
+            return response ?? new List<Category>();
         }
-
 
         public async Task<ProductDetail?> GetProductDetailAsync(int detailId)
         {
-            try
-            {
-                return await _httpClient.GetFromJsonAsync<ProductDetail>($"{BaseUrl}/details/{detailId}");
-            }
-            catch
-            {
-                return null;
-            }
-        }
-        public async Task<List<Category>> GetAllCategoriesAsync()
-        {
-            try
-            {
-                var response = await _httpClient.GetFromJsonAsync<List<Category>>(CategoriesUrl);
-                return response ?? new List<Category>();
-            }
-            catch (Exception ex)
-            {
-                throw new ApplicationException("Error al obtener las categorías.", ex);
-            }
+            return await _httpClient.GetFromJsonAsync<ProductDetail>($"api/products/details/{detailId}");
         }
 
-
-        public async Task<bool> UpdateProductDetailAsync(ProductDetail detail)
+        public async Task<bool> CreateProductDetailAsync(int productId, ProductDetail detail)
         {
-            var response = await _httpClient.PutAsJsonAsync($"{BaseUrl}/details/{detail.ProductDetailId}", detail);
+            var response = await _httpClient.PostAsJsonAsync($"api/products/{productId}/details", detail);
             return response.IsSuccessStatusCode;
         }
 
+        public async Task<bool> UpdateProductDetailAsync(ProductDetail detail)
+        {
+            var response = await _httpClient.PutAsJsonAsync($"api/products/details/{detail.ProductDetailId}", detail);
+            return response.IsSuccessStatusCode;
+        }
     }
 }

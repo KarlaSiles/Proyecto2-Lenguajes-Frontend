@@ -29,7 +29,7 @@ namespace MercatikaApp.ViewModel
         private readonly ProductService _productService = new ProductService();
 
         private ObservableCollection<Order> _orders = new();
-        public ICollectionView OrdersView { get;}
+        public ICollectionView OrdersView { get; }
         public ObservableCollection<OrderDetail> OrderDetails { get; set; } = new();
 
         private Order _selectedOrder;

@@ -70,20 +70,21 @@ namespace MercatikaApp.ViewModel
         {
             if (SelectedPayment == null)
             {
-                MessageBox.Show("Select a payment first.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Seleccione un pago primero.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
-            if (MessageBox.Show("Would you like to proceed with paying this bill now?", "Confirmar", MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes)
+            if (MessageBox.Show("¿Desea proceder a pagar esta cuenta ahora?", "Confirmar", MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes)
             {
-                MessageBox.Show("❌Payment has not been completed.");
+                MessageBox.Show("❌ El pago no se ha completado.");
                 return;
             }
 
-
+            // Mostrar ventana custom para seleccionar método
             var dialog = new PaymentMethodDialog();
             if (dialog.ShowDialog() == true)
             {
+                
                 string method = dialog.SelectedMethod;
                 int methodId = (method == "Efectivo") ? 2 : 1;
 
@@ -91,33 +92,33 @@ namespace MercatikaApp.ViewModel
 
                 if (method == "Tarjeta")
                 {
-                    cardInput = Microsoft.VisualBasic.Interaction.InputBox("Enter the card number:", "Pago con Tarjeta", "");
+                    cardInput = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el número de tarjeta:", "Pago con Tarjeta", "");
                     if (string.IsNullOrWhiteSpace(cardInput))
                     {
-                        MessageBox.Show("❌ No card number entered. Payment has been cancelled.");
+                        MessageBox.Show("❌ No se ingresó número de tarjeta. El pago se ha cancelado.");
                         return;
                     }
 
-                    if (MessageBox.Show($"¿Confirm that this is your number: {cardInput}?", "Confirm Card", MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes)
+                    if (MessageBox.Show($"¿Confirma que este es su número: {cardInput}?", "Confirmar Tarjeta", MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes)
                     {
-                        MessageBox.Show("❌ Card number not confirmed. Payment has been cancelled..");
+                        MessageBox.Show("❌ Número de tarjeta no confirmado. El pago se ha cancelado.");
                         return;
                     }
                 }
 
-                if (MessageBox.Show("¿Are you sure you want to confirm and complete the payment?", "Confirmar Pago", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+                if (MessageBox.Show("¿Está seguro de confirmar y completar el pago?", "Confirmar Pago", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
                 {
                     await _paymentService.ConfirmPaymentAsync(SelectedPayment.PaymentId, "pagado", cardInput, methodId);
-                    MessageBox.Show("✅ Payment made successfully. Thank you for your purchase.!");
+                    MessageBox.Show("✅ Pago realizado con éxito. ¡Gracias por su compra!");
                 }
                 else
                 {
-                    MessageBox.Show("❌ Payment has not been completed.");
+                    MessageBox.Show("❌ El pago no se ha completado.");
                 }
             }
             else
             {
-                MessageBox.Show("❌ No method selected. Payment has been cancelled.");
+                MessageBox.Show("❌ No se seleccionó método. El pago se ha cancelado.");
             }
 
             await LoadPaymentsAsync();
@@ -128,4 +129,3 @@ namespace MercatikaApp.ViewModel
             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
     }
 }
-

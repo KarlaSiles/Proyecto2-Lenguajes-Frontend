@@ -1,25 +1,29 @@
 ﻿using MercatikaApp.Models;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Json;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
-using System.Collections.Generic;
 using System.Windows;
+using System.Text.Json;
 
 namespace MercatikaApp.Services
 {
     public class PaymentApiService
     {
         private readonly HttpClient _httpClient;
-        private const string BaseUrl = "https://localhost:7086/api/payments";
 
         public PaymentApiService()
         {
-            _httpClient = new HttpClient();
+            _httpClient = new HttpClient
+            {
+                BaseAddress = new Uri(AppConfig.GetApiBaseUrl())
+            };
         }
 
         public async Task<List<Payment>> GetAllPaymentsAsync()
         {
-            var payments = await _httpClient.GetFromJsonAsync<List<Payment>>(BaseUrl);
+            var payments = await _httpClient.GetFromJsonAsync<List<Payment>>("api/payments");
             return payments ?? new List<Payment>();
         }
 
@@ -33,14 +37,11 @@ namespace MercatikaApp.Services
                 PaymentMethodId = paymentMethodId
             };
 
-            var jsonDebug = System.Text.Json.JsonSerializer.Serialize(obj, new System.Text.Json.JsonSerializerOptions { WriteIndented = true });
-            MessageBox.Show($"JSON que se enviará:\n{jsonDebug}", "Debug - JSON Enviado", MessageBoxButton.OK, MessageBoxImage.Information);
-
-            var response = await _httpClient.PutAsJsonAsync($"{BaseUrl}/{paymentId}", obj);
+            var jsonDebug = JsonSerializer.Serialize(obj, new JsonSerializerOptions { WriteIndented = true });
+            
+            var response = await _httpClient.PutAsJsonAsync($"api/payments/{paymentId}", obj);
             var responseText = await response.Content.ReadAsStringAsync();
-
-            MessageBox.Show($"Respuesta del servidor:\n{responseText}", "Debug - Respuesta", MessageBoxButton.OK, MessageBoxImage.Information);
-
+            
             return response.IsSuccessStatusCode;
         }
     }
