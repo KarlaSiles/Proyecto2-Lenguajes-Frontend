@@ -1,22 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using MercatikaApp.ViewModels;
 
-namespace MercatikaApp
+namespace MercatikaApp.Views
 {
-    /// <summary>
-    /// Lógica de interacción para LoginWindow.xaml
-    /// </summary>
     public partial class LoginWindow : Window
     {
         public LoginWindow()
@@ -24,33 +11,12 @@ namespace MercatikaApp
             InitializeComponent();
         }
 
-        private void Enter_Click(object sender, RoutedEventArgs e)
+        private void PwdBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            string username = txtUsername.Text.Trim();
-            string password = txtPassword.Password;
-
-            if (Authenticate(username, password))
+            if (DataContext is LoginViewModel vm && sender is PasswordBox pb)
             {
-                Application.Current.MainWindow = new MainWindow();
-                Application.Current.MainWindow.Show();
-
-                this.Close(); //cierra la ventana de login
+                vm.Password = pb.Password;
             }
-            else
-            {
-                lblError.Text = "Incorrect username or password.";
-            }
-        }
-
-        private bool Authenticate(string username, string password)
-        {
-            //validación
-            return username == "admin" && password == "1234";
-        }
-
-        private void Cancel_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
         }
     }
 }
