@@ -14,13 +14,15 @@ using System.Windows.Input;
 
 
 
-namespace  MercatikaApp.ViewModel
+namespace MercatikaApp.ViewModel
 {
     public class ProductViewModel : INotifyPropertyChanged
     {
         private readonly ProductService _productService;
 
         public ObservableCollection<Product> Products { get; set; } = new ObservableCollection<Product>();
+
+        public ObservableCollection<Category> Categories { get; set; } = new ObservableCollection<Category>();
 
         private Product _selectedProduct = new Product
         {
@@ -71,6 +73,8 @@ namespace  MercatikaApp.ViewModel
             Products.Clear();
             foreach (var product in products)
                 Products.Add(product);
+
+            await LoadCategoriesAsync(); // NUEVO: Cargar categorías al cargar productos
         }
 
         private async Task AddProductAsync()
@@ -83,7 +87,7 @@ namespace  MercatikaApp.ViewModel
 
             await LoadProductsAsync();
 
-            
+
             SelectedProduct = new Product
             {
                 CategoryCode = new Category()
@@ -135,9 +139,19 @@ namespace  MercatikaApp.ViewModel
                 && SelectedProduct.CategoryCode?.CategoryCode > 0;
         }
 
+
+        public async Task LoadCategoriesAsync()
+        {
+            var categories = await _productService.GetAllCategoriesAsync();
+            Categories.Clear();
+            foreach (var category in categories)
+                Categories.Add(category);
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 }
+
 

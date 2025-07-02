@@ -1,34 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\beth_\\source\\repos\\Proyecto2_Lenguajes_FrontendWPF\\",
+  "WorkspaceRootPath": "D:\\Lenguajes\\Proyectos\\Project 2\\C\u00F3digo\\Frontend\\cambios front\\Proyecto2-Lenguajes-Frontend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F4521E04-5FC9-473C-8BEC-FF8575DEFB81}|MercatikaApp\\MercatikaApp.csproj|c:\\users\\beth_\\source\\repos\\proyecto2_lenguajes_frontendwpf\\mercatikaapp\\views\\clienteditwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4521E04-5FC9-473C-8BEC-FF8575DEFB81}|MercatikaApp\\MercatikaApp.csproj|solutionrelative:mercatikaapp\\views\\clienteditwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F4521E04-5FC9-473C-8BEC-FF8575DEFB81}|MercatikaApp\\MercatikaApp.csproj|d:\\lenguajes\\proyectos\\project 2\\c\u00F3digo\\frontend\\cambios front\\proyecto2-lenguajes-frontend\\mercatikaapp\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4521E04-5FC9-473C-8BEC-FF8575DEFB81}|MercatikaApp\\MercatikaApp.csproj|solutionrelative:mercatikaapp\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F4521E04-5FC9-473C-8BEC-FF8575DEFB81}|MercatikaApp\\MercatikaApp.csproj|c:\\users\\beth_\\source\\repos\\proyecto2_lenguajes_frontendwpf\\mercatikaapp\\views\\clientsucview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F4521E04-5FC9-473C-8BEC-FF8575DEFB81}|MercatikaApp\\MercatikaApp.csproj|solutionrelative:mercatikaapp\\views\\clientsucview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{F4521E04-5FC9-473C-8BEC-FF8575DEFB81}|MercatikaApp\\MercatikaApp.csproj|d:\\lenguajes\\proyectos\\project 2\\c\u00F3digo\\frontend\\cambios front\\proyecto2-lenguajes-frontend\\mercatikaapp\\viewmodel\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4521E04-5FC9-473C-8BEC-FF8575DEFB81}|MercatikaApp\\MercatikaApp.csproj|solutionrelative:mercatikaapp\\viewmodel\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F4521E04-5FC9-473C-8BEC-FF8575DEFB81}|MercatikaApp\\MercatikaApp.csproj|c:\\users\\beth_\\source\\repos\\proyecto2_lenguajes_frontendwpf\\mercatikaapp\\viewmodel\\clientviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4521E04-5FC9-473C-8BEC-FF8575DEFB81}|MercatikaApp\\MercatikaApp.csproj|solutionrelative:mercatikaapp\\viewmodel\\clientviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4521E04-5FC9-473C-8BEC-FF8575DEFB81}|MercatikaApp\\MercatikaApp.csproj|c:\\users\\beth_\\source\\repos\\proyecto2_lenguajes_frontendwpf\\mercatikaapp\\viewmodel\\clienteditviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4521E04-5FC9-473C-8BEC-FF8575DEFB81}|MercatikaApp\\MercatikaApp.csproj|solutionrelative:mercatikaapp\\viewmodel\\clienteditviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4521E04-5FC9-473C-8BEC-FF8575DEFB81}|MercatikaApp\\MercatikaApp.csproj|c:\\users\\beth_\\source\\repos\\proyecto2_lenguajes_frontendwpf\\mercatikaapp\\services\\clientapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4521E04-5FC9-473C-8BEC-FF8575DEFB81}|MercatikaApp\\MercatikaApp.csproj|solutionrelative:mercatikaapp\\services\\clientapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4521E04-5FC9-473C-8BEC-FF8575DEFB81}|MercatikaApp\\MercatikaApp.csproj|c:\\users\\beth_\\source\\repos\\proyecto2_lenguajes_frontendwpf\\mercatikaapp\\views\\clientsucview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4521E04-5FC9-473C-8BEC-FF8575DEFB81}|MercatikaApp\\MercatikaApp.csproj|solutionrelative:mercatikaapp\\views\\clientsucview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4521E04-5FC9-473C-8BEC-FF8575DEFB81}|MercatikaApp\\MercatikaApp.csproj|c:\\users\\beth_\\source\\repos\\proyecto2_lenguajes_frontendwpf\\mercatikaapp\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4521E04-5FC9-473C-8BEC-FF8575DEFB81}|MercatikaApp\\MercatikaApp.csproj|solutionrelative:mercatikaapp\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F4521E04-5FC9-473C-8BEC-FF8575DEFB81}|MercatikaApp\\MercatikaApp.csproj|d:\\lenguajes\\proyectos\\project 2\\c\u00F3digo\\frontend\\cambios front\\proyecto2-lenguajes-frontend\\mercatikaapp\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4521E04-5FC9-473C-8BEC-FF8575DEFB81}|MercatikaApp\\MercatikaApp.csproj|solutionrelative:mercatikaapp\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -53,117 +37,42 @@
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:131:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Client.cs",
-              "DocumentMoniker": "C:\\Users\\beth_\\source\\repos\\Proyecto2_Lenguajes_FrontendWPF\\MercatikaApp\\Models\\Client.cs",
-              "RelativeDocumentMoniker": "MercatikaApp\\Models\\Client.cs",
-              "ToolTip": "C:\\Users\\beth_\\source\\repos\\Proyecto2_Lenguajes_FrontendWPF\\MercatikaApp\\Models\\Client.cs",
-              "RelativeToolTip": "MercatikaApp\\Models\\Client.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAmAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ProductViewModel.cs",
+              "DocumentMoniker": "D:\\Lenguajes\\Proyectos\\Project 2\\C\u00F3digo\\Frontend\\cambios front\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\ViewModel\\ProductViewModel.cs",
+              "RelativeDocumentMoniker": "MercatikaApp\\ViewModel\\ProductViewModel.cs",
+              "ToolTip": "D:\\Lenguajes\\Proyectos\\Project 2\\C\u00F3digo\\Frontend\\cambios front\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\ViewModel\\ProductViewModel.cs",
+              "RelativeToolTip": "MercatikaApp\\ViewModel\\ProductViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T21:19:25.22Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ClientsUcView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\beth_\\source\\repos\\Proyecto2_Lenguajes_FrontendWPF\\MercatikaApp\\Views\\ClientsUcView.xaml.cs",
-              "RelativeDocumentMoniker": "MercatikaApp\\Views\\ClientsUcView.xaml.cs",
-              "ToolTip": "C:\\Users\\beth_\\source\\repos\\Proyecto2_Lenguajes_FrontendWPF\\MercatikaApp\\Views\\ClientsUcView.xaml.cs",
-              "RelativeToolTip": "MercatikaApp\\Views\\ClientsUcView.xaml.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAkwBoAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T20:47:38.556Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ClientApiService.cs",
-              "DocumentMoniker": "C:\\Users\\beth_\\source\\repos\\Proyecto2_Lenguajes_FrontendWPF\\MercatikaApp\\Services\\ClientApiService.cs",
-              "RelativeDocumentMoniker": "MercatikaApp\\Services\\ClientApiService.cs",
-              "ToolTip": "C:\\Users\\beth_\\source\\repos\\Proyecto2_Lenguajes_FrontendWPF\\MercatikaApp\\Services\\ClientApiService.cs",
-              "RelativeToolTip": "MercatikaApp\\Services\\ClientApiService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T20:45:46.937Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ClientEditViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\beth_\\source\\repos\\Proyecto2_Lenguajes_FrontendWPF\\MercatikaApp\\ViewModel\\ClientEditViewModel.cs",
-              "RelativeDocumentMoniker": "MercatikaApp\\ViewModel\\ClientEditViewModel.cs",
-              "ToolTip": "C:\\Users\\beth_\\source\\repos\\Proyecto2_Lenguajes_FrontendWPF\\MercatikaApp\\ViewModel\\ClientEditViewModel.cs",
-              "RelativeToolTip": "MercatikaApp\\ViewModel\\ClientEditViewModel.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAwwEkAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T20:44:14.239Z",
+              "WhenOpened": "2025-07-02T00:20:29.149Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ClientViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\beth_\\source\\repos\\Proyecto2_Lenguajes_FrontendWPF\\MercatikaApp\\ViewModel\\ClientViewModel.cs",
-              "RelativeDocumentMoniker": "MercatikaApp\\ViewModel\\ClientViewModel.cs",
-              "ToolTip": "C:\\Users\\beth_\\source\\repos\\Proyecto2_Lenguajes_FrontendWPF\\MercatikaApp\\ViewModel\\ClientViewModel.cs",
-              "RelativeToolTip": "MercatikaApp\\ViewModel\\ClientViewModel.cs",
-              "ViewState": "AgIAAPMAAAAAAAAAAAAAAPMAAAABAAAAAAAAAA==",
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\Lenguajes\\Proyectos\\Project 2\\C\u00F3digo\\Frontend\\cambios front\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "MercatikaApp\\Models\\Category.cs",
+              "ToolTip": "D:\\Lenguajes\\Proyectos\\Project 2\\C\u00F3digo\\Frontend\\cambios front\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\Models\\Category.cs",
+              "RelativeToolTip": "MercatikaApp\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T20:40:07.435Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ClientsUcView.xaml",
-              "DocumentMoniker": "C:\\Users\\beth_\\source\\repos\\Proyecto2_Lenguajes_FrontendWPF\\MercatikaApp\\Views\\ClientsUcView.xaml",
-              "RelativeDocumentMoniker": "MercatikaApp\\Views\\ClientsUcView.xaml",
-              "ToolTip": "C:\\Users\\beth_\\source\\repos\\Proyecto2_Lenguajes_FrontendWPF\\MercatikaApp\\Views\\ClientsUcView.xaml",
-              "RelativeToolTip": "MercatikaApp\\Views\\ClientsUcView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-01T20:44:29.913Z",
+              "WhenOpened": "2025-07-02T00:17:15.422Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ClientEditWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\beth_\\source\\repos\\Proyecto2_Lenguajes_FrontendWPF\\MercatikaApp\\Views\\ClientEditWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MercatikaApp\\Views\\ClientEditWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\beth_\\source\\repos\\Proyecto2_Lenguajes_FrontendWPF\\MercatikaApp\\Views\\ClientEditWindow.xaml.cs",
-              "RelativeToolTip": "MercatikaApp\\Views\\ClientEditWindow.xaml.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAABkAAAA6AAAAAAAAAA==",
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "D:\\Lenguajes\\Proyectos\\Project 2\\C\u00F3digo\\Frontend\\cambios front\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "MercatikaApp\\Services\\ProductService.cs",
+              "ToolTip": "D:\\Lenguajes\\Proyectos\\Project 2\\C\u00F3digo\\Frontend\\cambios front\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\Services\\ProductService.cs",
+              "RelativeToolTip": "MercatikaApp\\Services\\ProductService.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAQwEcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T20:40:53.684Z",
+              "WhenOpened": "2025-07-02T00:16:47.716Z",
               "EditorCaption": ""
             }
           ]

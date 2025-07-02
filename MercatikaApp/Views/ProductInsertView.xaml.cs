@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MercatikaApp.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,13 @@ namespace MercatikaApp.Views
         public ProductInsertView()
         {
             InitializeComponent();
+
+            Loaded += async (s, e) =>
+            {
+                if (DataContext is ProductViewModel vm)
+                    await vm.LoadCategoriesAsync();
+            };
         }
     }
+
 }

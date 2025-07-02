@@ -13,6 +13,6 @@ namespace MercatikaApp.Models
         public string? UniqueProductCode { get; set; }
         public int StockAmount { get; set; }
         public string? Size { get; set; }
-        public Product? Product { get; set; } 
+        public Product? Product { get; set; }
     }
 }

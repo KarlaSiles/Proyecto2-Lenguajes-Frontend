@@ -10,13 +10,14 @@ namespace MercatikaApp.Services
     {
         private readonly HttpClient _httpClient;
         private const string BaseUrl = "https://localhost:7086/api/products";
+        private const string CategoriesUrl = "https://localhost:7086/api/Products/categories";
 
         public ProductService()
         {
             _httpClient = new HttpClient();
         }
 
-        
+
         public async Task<List<Product>> SearchProductsAsync(string searchTerm)
         {
             try
@@ -34,7 +35,7 @@ namespace MercatikaApp.Services
             }
         }
 
-        
+
         public async Task<List<Product>> GetAllProductsAsync()
         {
             try
@@ -48,7 +49,7 @@ namespace MercatikaApp.Services
             }
         }
 
-        
+
         public async Task<Product?> GetByIdAsync(int id)
         {
             try
@@ -61,19 +62,19 @@ namespace MercatikaApp.Services
             }
         }
 
-        
+
         public async Task<bool> CreateProductAsync(Product product)
         {
-            
+
             var json = JsonSerializer.Serialize(product, new JsonSerializerOptions { WriteIndented = true });
 
-            
-            MessageBox.Show("JSON enviado:\n" + json, "Datos enviados", MessageBoxButton.OK, MessageBoxImage.Information);
 
             
+
+
             var response = await _httpClient.PostAsJsonAsync(BaseUrl, product);
 
-            
+
             if (!response.IsSuccessStatusCode)
             {
                 var error = await response.Content.ReadAsStringAsync();
@@ -85,28 +86,28 @@ namespace MercatikaApp.Services
 
 
 
-        
+
         public async Task<bool> UpdateProductAsync(Product product)
         {
             var response = await _httpClient.PutAsJsonAsync($"{BaseUrl}/{product.ProductId}", product);
             return response.IsSuccessStatusCode;
         }
 
-        
+
         public async Task<bool> DeleteProductAsync(int id)
         {
             var response = await _httpClient.DeleteAsync($"{BaseUrl}/{id}");
             return response.IsSuccessStatusCode;
         }
 
-        
+
         public async Task<bool> CreateProductDetailAsync(int productId, ProductDetail detail)
         {
             var response = await _httpClient.PostAsJsonAsync($"{BaseUrl}/{productId}/details", detail);
             return response.IsSuccessStatusCode;
         }
 
-        
+
         public async Task<ProductDetail?> GetProductDetailAsync(int detailId)
         {
             try
@@ -118,8 +119,20 @@ namespace MercatikaApp.Services
                 return null;
             }
         }
+        public async Task<List<Category>> GetAllCategoriesAsync()
+        {
+            try
+            {
+                var response = await _httpClient.GetFromJsonAsync<List<Category>>(CategoriesUrl);
+                return response ?? new List<Category>();
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Error al obtener las categorías.", ex);
+            }
+        }
 
-       
+
         public async Task<bool> UpdateProductDetailAsync(ProductDetail detail)
         {
             var response = await _httpClient.PutAsJsonAsync($"{BaseUrl}/details/{detail.ProductDetailId}", detail);
@@ -128,4 +141,3 @@ namespace MercatikaApp.Services
 
     }
 }
-

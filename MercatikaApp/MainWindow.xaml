@@ -103,8 +103,8 @@
                 </MenuItem>
 
                 <MenuItem Header="Products" Style="{StaticResource MainMenuItem}">
-                    <MenuItem Header="Add product" Style="{StaticResource SubMenuItem}"/>
-                    <MenuItem Header="Add product Detail" Style="{StaticResource SubMenuItem}"/>
+                    <MenuItem Header="Abrir Gestión de Productos" Click="AbrirProducto_Click"/>
+                    <MenuItem Header="Abrir Gestión de Detalles" Click="BtnInsertDetail_Click"/>
                 </MenuItem>
 
                 <MenuItem Header="Clients" Style="{StaticResource MainMenuItem}">

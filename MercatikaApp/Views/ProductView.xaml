@@ -5,95 +5,147 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:MercatikaApp.ViewModel"
         mc:Ignorable="d"
-        Title="Gestión de Productos" Height="600" Width="800">
+        Title="Gestión de Productos" Height="600" Width="800"
+        Background="White"
+        WindowStartupLocation="CenterScreen">
 
     <Window.DataContext>
         <vm:ProductViewModel />
     </Window.DataContext>
 
-    <Grid Margin="10">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
+    <Window.Resources>
+        <Style x:Key="OrangeButton" TargetType="Button">
+            <Setter Property="Background" Value="#FFE67C00"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="BorderBrush" Value="#FFD26900"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FFD26900"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
 
-        
-        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0 0 0 10">
-            <TextBox Width="300"
-                     Margin="0 0 10 0"
-                     Text="{Binding SearchTerm, UpdateSourceTrigger=PropertyChanged}" />
-            <Button Content="Buscar"
-                    Command="{Binding SearchCommand}"
-                    Width="80"/>
+        <Style x:Key="LabelStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="5,0"/>
+            <Setter Property="Foreground" Value="#FF1F1F1F"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="BorderBrush" Value="#FFCCCCCC"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+    </Window.Resources>
+
+    <DockPanel>
+        <!-- ENCABEZADO CON LOGO Y BARRA -->
+        <StackPanel DockPanel.Dock="Top" Background="White">
+            <Grid Margin="10,5" Height="70">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="Resources/LogoMK.png" 
+                       Height="60"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Grid.Column="0"
+                       Margin="10,0"/>
+            </Grid>
+
+            <Border Height="4" Background="#FFE67C00" Margin="0,0,0,10"/>
         </StackPanel>
 
-        
-        <DataGrid Grid.Row="1"
-                  ItemsSource="{Binding Products}"
-                  SelectedItem="{Binding SelectedProduct}"
-                  AutoGenerateColumns="False"
-                  CanUserAddRows="False"
-                  Height="300"
-                  Margin="0 0 0 10">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="ID"
-                                    Binding="{Binding ProductId}"
-                                    Width="50"/>
-                <DataGridTextColumn Header="Nombre"
-                                    Binding="{Binding ProductName}"
-                                    Width="200"/>
-                <DataGridTextColumn Header="Precio"
-                                    Binding="{Binding Price}"
-                                    Width="100"/>
-                <DataGridTextColumn Header="Categoría"
-                                    Binding="{Binding CategoryCode.Description}"
-                                    Width="150"/>
-            </DataGrid.Columns>
-        </DataGrid>
+        <!-- CONTENIDO PRINCIPAL -->
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
 
-        
-        <StackPanel Grid.Row="2" Orientation="Vertical">
-
-            
-            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
-                <TextBlock Text="Nombre:" Width="60" VerticalAlignment="Center"/>
-                <TextBox Width="200"
-                         Text="{Binding SelectedProduct.ProductName, UpdateSourceTrigger=PropertyChanged}"
-                         Margin="5"/>
-
-                <TextBlock Text="Precio:" Width="60" VerticalAlignment="Center"/>
-                <TextBox Width="100"
-                         Margin="5"
-                         Text="{Binding SelectedProduct.Price,
-                                        UpdateSourceTrigger=PropertyChanged,
-                                        TargetNullValue=0}" />
-
-                <TextBlock Text="Categoría ID:" Width="80" VerticalAlignment="Center"/>
-                <TextBox Width="50"
-                         Margin="5"
-                         Text="{Binding SelectedProduct.CategoryCode.CategoryCode, UpdateSourceTrigger=PropertyChanged, TargetNullValue=0}" />
+            <!-- Buscador -->
+            <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0 0 0 10">
+                <TextBox Width="300"
+                         Text="{Binding SearchTerm, UpdateSourceTrigger=PropertyChanged}" />
+                <Button Content="Buscar"
+                        Width="80"
+                        Command="{Binding SearchCommand}"
+                        Style="{StaticResource OrangeButton}"/>
             </StackPanel>
 
-            
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                <Button Content="Insertar"
-                 Width="100"
-                 Margin="5"
-                 Click="AbrirInsertarProducto_Click"/>
+            <!-- Tabla -->
+            <DataGrid Grid.Row="1"
+                      ItemsSource="{Binding Products}"
+                      SelectedItem="{Binding SelectedProduct}"
+                      AutoGenerateColumns="False"
+                      CanUserAddRows="False"
+                      Height="300"
+                      Margin="0 0 0 10">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID"
+                                        Binding="{Binding ProductId}"
+                                        Width="50"/>
+                    <DataGridTextColumn Header="Nombre"
+                                        Binding="{Binding ProductName}"
+                                        Width="200"/>
+                    <DataGridTextColumn Header="Precio"
+                                        Binding="{Binding Price}"
+                                        Width="100"/>
+                    <DataGridTextColumn Header="Categoría"
+                                        Binding="{Binding CategoryCode.Description}"
+                                        Width="150"/>
+                </DataGrid.Columns>
+            </DataGrid>
 
-                <Button Content="Actualizar"
-                        Command="{Binding UpdateCommand}"
-                        Width="100"
-                        Margin="5"/>
-                <Button Content="Eliminar"
-                        Command="{Binding DeleteCommand}"
-                        Width="100"
-                        Margin="5"/>
+            <!-- Formularios y acciones -->
+            <StackPanel Grid.Row="2" Orientation="Vertical">
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                    <TextBlock Text="Nombre:" Width="60" Style="{StaticResource LabelStyle}"/>
+                    <TextBox Width="200"
+                             Text="{Binding SelectedProduct.ProductName, UpdateSourceTrigger=PropertyChanged}"/>
+
+                    <TextBlock Text="Precio:" Width="60" Style="{StaticResource LabelStyle}"/>
+                    <TextBox Width="100"
+                             Text="{Binding SelectedProduct.Price, UpdateSourceTrigger=PropertyChanged, TargetNullValue=0}" />
+
+                    <TextBlock Text="Categoría ID:" Width="80" Style="{StaticResource LabelStyle}"/>
+                    <TextBox Width="50"
+                             Text="{Binding SelectedProduct.CategoryCode.CategoryCode, UpdateSourceTrigger=PropertyChanged, TargetNullValue=0}" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Button Content="Insertar"
+                            Width="100"
+                            Click="AbrirInsertarProducto_Click"
+                            Style="{StaticResource OrangeButton}"/>
+
+                    <Button Content="Actualizar"
+                            Width="100"
+                            Command="{Binding UpdateCommand}"
+                            Style="{StaticResource OrangeButton}"/>
+
+                    <Button Content="Eliminar"
+                            Width="100"
+                            Command="{Binding DeleteCommand}"
+                            Style="{StaticResource OrangeButton}"/>
+                </StackPanel>
             </StackPanel>
-        </StackPanel>
-    </Grid>
+        </Grid>
+    </DockPanel>
 </Window>
-
-
 
