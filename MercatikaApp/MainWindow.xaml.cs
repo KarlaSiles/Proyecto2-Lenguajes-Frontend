@@ -50,6 +50,11 @@ namespace MercatikaApp
             MainContentFrame.Content = pagosVista;
         }
 
+        private void ShowReports_Click(object sender, RoutedEventArgs e)
+        {
+            var reportesVista = new ReportsListView();
+            MainContentFrame.Content = reportesVista;
+        }
 
         private void Historial_Click(object sender, RoutedEventArgs e)
         {

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Desktop\\Universidad\\Año 3\\Lenguajes\\Proyecto 2\\Frontend with todo\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\MercatikaApp.csproj": {}
+    "C:\\Users\\scorp\\ProyectoDos\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\MercatikaApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Desktop\\Universidad\\Año 3\\Lenguajes\\Proyecto 2\\Frontend with todo\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\MercatikaApp.csproj": {
+    "C:\\Users\\scorp\\ProyectoDos\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\MercatikaApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Universidad\\Año 3\\Lenguajes\\Proyecto 2\\Frontend with todo\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\MercatikaApp.csproj",
+        "projectUniqueName": "C:\\Users\\scorp\\ProyectoDos\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\MercatikaApp.csproj",
         "projectName": "MercatikaApp",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\Universidad\\Año 3\\Lenguajes\\Proyecto 2\\Frontend with todo\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\MercatikaApp.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\Universidad\\Año 3\\Lenguajes\\Proyecto 2\\Frontend with todo\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\obj\\",
+        "projectPath": "C:\\Users\\scorp\\ProyectoDos\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\MercatikaApp.csproj",
+        "packagesPath": "C:\\Users\\scorp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\scorp\\ProyectoDos\\Proyecto2-Lenguajes-Frontend\\MercatikaApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\scorp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -73,6 +73,14 @@
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[9.0.6, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2025.5.1, )"
             }
           },
           "imports": [
@@ -94,7 +102,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

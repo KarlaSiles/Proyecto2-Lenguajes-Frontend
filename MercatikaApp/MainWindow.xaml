@@ -1,7 +1,7 @@
 ﻿<Window x:Class="MercatikaApp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Mercatika" Height="600" Width="1000"
+        Title="Mercatika" Height="650" Width="1000"
         WindowStartupLocation="CenterScreen"
         Background="White">
 
@@ -85,19 +85,20 @@
 
                 <!-- Botón cerrar sesión -->
                 <Button x:Name="LogOutButton"
-                        Content="Cerrar sesión"
+                        Content="Log Out"
                         Grid.Column="2"
                         VerticalAlignment="Center"
                         Margin="0,0,10,0"
-                        Style="{StaticResource OrangeButton}"/>
+                        Style="{StaticResource OrangeButton}"
+                        Click="LogOut_Click"/>
             </Grid>
 
             <!-- Menú principal -->
             <Menu Background="White" Margin="10,0">
-                <MenuItem Header="Pedidos" Style="{StaticResource MainMenuItem}">
-                    <MenuItem Header="Nuevo pedido" Style="{StaticResource SubMenuItem}" Click="NuevoPedido_Click"/>
-                    <MenuItem Header="Historial" Style="{StaticResource SubMenuItem}" Click="Historial_Click"/>
-                    <MenuItem Header="Pendientes" Style="{StaticResource SubMenuItem}" Click="Pagos_Click"/>
+                <MenuItem Header="Orders" Style="{StaticResource MainMenuItem}">
+                    <MenuItem Header="New Order" Style="{StaticResource SubMenuItem}" Click="NuevoPedido_Click"/>
+                    <MenuItem Header="Record" Style="{StaticResource SubMenuItem}" Click="Historial_Click"/>
+                    <MenuItem Header="Pending Payments" Style="{StaticResource SubMenuItem}" Click="Pagos_Click"/>
                 </MenuItem>
 
                 <MenuItem Header="Products" Style="{StaticResource MainMenuItem}">
@@ -109,12 +110,8 @@
                     <MenuItem Header="Customer management" Style="{StaticResource SubMenuItem}" Click="CustomerManagement_Click"/>
                 </MenuItem>
 
-                <MenuItem Header="Reportes" Style="{StaticResource MainMenuItem}">
-                    <MenuItem Header="Ventas" Style="{StaticResource SubMenuItem}"/>
-                    <MenuItem Header="Financieros" Style="{StaticResource SubMenuItem}"/>
-                    <MenuItem Header="Personalizados" Style="{StaticResource SubMenuItem}"/>
-                    <Separator/>
-                    <MenuItem Header="Exportar datos" Style="{StaticResource SubMenuItem}"/>
+                <MenuItem Header="Reports" Style="{StaticResource MainMenuItem}">
+                    <MenuItem Header="Order Invoices" Style="{StaticResource SubMenuItem}" Click="ShowReports_Click"/>
                 </MenuItem>
 
                 <MenuItem Header="Company Information" Style="{StaticResource MainMenuItem}">

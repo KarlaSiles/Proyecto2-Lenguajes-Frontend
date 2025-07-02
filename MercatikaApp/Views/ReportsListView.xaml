@@ -1,0 +1,139 @@
+﻿<UserControl x:Class="MercatikaApp.Views.ReportsListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:MercatikaApp.ViewModel"
+             xmlns:local="clr-namespace:MercatikaApp.Converters"
+             Background="White">
+
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+        <local:InverseBoolToVisibilityConverter x:Key="InverseBoolToVisibilityConverter" />
+
+        <Style x:Key="OrangeButton" TargetType="Button">
+            <Setter Property="Background" Value="#FFE67C00"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="BorderBrush" Value="#FFD26900"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FFD26900"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+
+    <UserControl.DataContext>
+        <vm:ReportViewModel />
+    </UserControl.DataContext>
+
+    <Grid>
+        <!-- Vista Lista -->
+        <Grid Visibility="{Binding IsDetailMode, Converter={StaticResource InverseBoolToVisibilityConverter}}">
+            <DockPanel Margin="5">
+                <StackPanel Orientation="Horizontal"
+                            DockPanel.Dock="Top"
+                            Margin="0,0,0,10"
+                            VerticalAlignment="Center">
+                    <Button Content="Refresh"
+                            Style="{StaticResource OrangeButton}"
+                            Command="{Binding LoadOrdersCommand}"
+                            Width="70"
+                            Margin="0,0,10,0"/>
+
+                    <Label Content="Client ID:"
+                           VerticalAlignment="Center"
+                           Margin="0,0,5,0"/>
+                    <TextBox Width="60"
+                             Margin="0,0,10,0"
+                             Text="{Binding FilterClientId, UpdateSourceTrigger=PropertyChanged}" />
+
+                    <Label Content="Province:"
+                           VerticalAlignment="Center"
+                           Margin="0,0,5,0"/>
+                    <TextBox Width="120"
+                             Margin="0,0,10,0"
+                             Text="{Binding FilterProvince, UpdateSourceTrigger=PropertyChanged}" />
+
+                    <Label Content="Date From:"
+                           VerticalAlignment="Center"
+                           Margin="0,0,5,0"/>
+                    <DatePicker SelectedDate="{Binding FilterDateFrom, UpdateSourceTrigger=PropertyChanged}"
+                                Margin="0,0,10,0"/>
+
+                    <Label Content="Date to:"
+                           VerticalAlignment="Center"
+                           Margin="0,0,5,0"/>
+                    <DatePicker SelectedDate="{Binding FilterDateTo, UpdateSourceTrigger=PropertyChanged}" />
+                </StackPanel>
+
+                <DataGrid ItemsSource="{Binding OrdersView}"
+                          SelectedItem="{Binding SelectedOrder}"
+                          AutoGenerateColumns="False"
+                          IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding OrderId}" Width="Auto" />
+                        <DataGridTextColumn Header="Client" Binding="{Binding ClientId}" Width="Auto" />
+                        <DataGridTextColumn Header="Employee" Binding="{Binding EmployeeId}" Width="Auto" />
+                        <DataGridTextColumn Header="Order Date" Binding="{Binding OrderDate, StringFormat=d}" Width="Auto" />
+                        <DataGridTextColumn Header="Address" Binding="{Binding AddressTrip}" Width="300" />
+                        <DataGridTextColumn Header="Province" Binding="{Binding ProvinceTrip}" Width="160" />
+                        <DataGridTextColumn Header="Country" Binding="{Binding CountryTrip}" Width="160" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </DockPanel>
+        </Grid>
+
+        <!-- Vista Detalle -->
+        <Grid Visibility="{Binding IsDetailMode, Converter={StaticResource BoolToVisibilityConverter}}">
+            <StackPanel Margin="10">
+                <TextBlock Text="Order Detail"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Margin="0,0,0,10" />
+
+                <TextBlock Text="{Binding SelectedOrder.OrderId, StringFormat=Order ID: {0}}" />
+                <TextBlock Text="{Binding SelectedOrder.ClientId, StringFormat=Client ID: {0}}" />
+                <TextBlock Text="{Binding SelectedOrder.EmployeeId, StringFormat=Employee: {0}}" />
+                <TextBlock Text="{Binding SelectedOrder.AddressTrip, StringFormat=Address: {0}}" />
+                <TextBlock Text="{Binding SelectedOrder.ProvinceTrip, StringFormat=Province: {0}}" />
+                <TextBlock Text="{Binding SelectedOrder.CountryTrip, StringFormat=Country: {0}}" />
+                <TextBlock Text="{Binding SelectedOrder.PhoneTrip, StringFormat=Phone Number: {0}}" />
+                <TextBlock Text="{Binding SelectedOrder.OrderDate, StringFormat=Order Date: {0:d}}" />
+                <TextBlock Text="{Binding SelectedOrder.DateTrip, StringFormat=Trip Date: {0:d}}" />
+
+                <TextBlock Text="Product(s) Details:"
+                           FontWeight="Bold"
+                           Margin="0,20,0,5" />
+
+                <DataGrid ItemsSource="{Binding OrderDetails}"
+                          SelectedItem="{Binding SelectedOrderDetail}"
+                          AutoGenerateColumns="False"
+                          IsReadOnly="False"
+                          Height="150">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Order ID" Binding="{Binding OrderId}" IsReadOnly="True" />
+                        <DataGridTextColumn Header="Product ID" Binding="{Binding ProductDetailId}" IsReadOnly="True" />
+                        <DataGridTextColumn Header="Amount" Binding="{Binding Amount, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False" />
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <Button Content="Save PDF"
+                            Style="{StaticResource OrangeButton}"
+                            Command="{Binding SavePDFCommand}"
+                            Width="150"
+                            Margin="5"/>
+                    <Button Content="Back"
+                            Style="{StaticResource OrangeButton}"
+                            Command="{Binding BackToListCommand}"
+                            Width="80"
+                            Height="30"
+                            Margin="5"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

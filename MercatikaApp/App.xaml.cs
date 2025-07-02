@@ -1,7 +1,8 @@
-﻿using System.Configuration;
+﻿using MercatikaApp.Views;
+using QuestPDF.Infrastructure;
+using System.Configuration;
 using System.Data;
 using System.Windows;
-using MercatikaApp.Views;
 
 namespace MercatikaApp
 {
@@ -28,5 +29,12 @@ namespace MercatikaApp
                 Shutdown();
             }
         }
+
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            QuestPDF.Settings.License = LicenseType.Community;
+            base.OnStartup(e);
+        }
+
     }
 }

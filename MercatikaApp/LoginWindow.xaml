@@ -38,7 +38,7 @@
                Margin="0,0,0,20"/>
 
         <!-- Usuario -->
-        <TextBlock Text="Usuario:" Grid.Row="1" Grid.Column="0"
+        <TextBlock Text="Username:" Grid.Row="1" Grid.Column="0"
                    VerticalAlignment="Center" Margin="0,0,10,10"
                    FontSize="14" FontWeight="Bold"/>
         <TextBox Grid.Row="1" Grid.Column="1"
@@ -46,7 +46,7 @@
                  Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"/>
 
         <!-- Contraseña -->
-        <TextBlock Text="Contraseña:" Grid.Row="2" Grid.Column="0"
+        <TextBlock Text="Password:" Grid.Row="2" Grid.Column="0"
                    VerticalAlignment="Center" Margin="0,0,10,10"
                    FontSize="14" FontWeight="Bold"/>
         <PasswordBox x:Name="pwdBox"
@@ -59,11 +59,11 @@
                     Orientation="Horizontal"
                     HorizontalAlignment="Right"
                     Margin="0,10,0,0">
-            <Button Content="Ingresar"
+            <Button Content="Login"
                     Style="{StaticResource OrangeButton}"
                     Command="{Binding LoginCommand}"
                     IsEnabled="{Binding Path=IsBusy, Converter={StaticResource InverseBoolToVisibilityConverter}}"/>
-            <Button Content="Cancelar"
+            <Button Content="Cancel"
                     Style="{StaticResource OrangeButton}"
                     Command="{Binding CancelCommand}"
                     Margin="10,0,0,0"/>
